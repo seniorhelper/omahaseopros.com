@@ -1,0 +1,19 @@
+# robots.txt — OmahaSEOPros.com
+# Generated: 2026-04-04
+
+User-agent: *
+Allow: /
+
+# Block access to form processing paths (if any backend is added later)
+Disallow: /wp-admin/
+Disallow: /wp-login.php
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /.env
+Disallow: /config/
+
+# Crawl delay (optional — adjust or remove if causing indexing issues)
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://www.omahaseopros.com/sitemap.xml
