@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank You | Omaha SEO Pros</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://www.omahaseopros.com/thank-you.html">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;600;700&family=Barlow+Condensed:wght@400;700;900&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --red: #E8132A;
+  --red-dark: #b80e20;
+  --black: #0A0A0A;
+  --charcoal: #1A1A1A;
+  --slate: #2C2C2C;
+  --white: #FFFFFF;
+  --corn: #F5C800;
+  --corn-dark: #D4A900;
+  --green-go: #1DB954;
+  --border: rgba(255,255,255,0.08);
+  --radius: 4px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; }
+body {
+  font-family: 'Barlow', sans-serif;
+  background: var(--black);
+  color: var(--white);
+  line-height: 1.65;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a { color: var(--red); text-decoration: none; transition: color 0.2s; }
+a:hover { color: var(--corn); }
+
+/* ── HEADER ── */
+header {
+  background: rgba(10,10,10,0.97);
+  border-bottom: 1px solid var(--border);
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.logo-text {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.7rem;
+  letter-spacing: 0.05em;
+  color: var(--white);
+  line-height: 1;
+}
+.logo-text span { color: var(--red); }
+.phone-link {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 0.05em;
+  color: var(--corn) !important;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ── MAIN ── */
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 24px;
+  position: relative;
+  overflow: hidden;
+  background: var(--charcoal);
+}
+.bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(232,19,42,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(232,19,42,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+.bg-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(29,185,84,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.thankyou-card {
+  background: var(--black);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 10px;
+  padding: 56px 48px;
+  max-width: 640px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.thankyou-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--green-go), var(--corn));
+  border-radius: 10px 10px 0 0;
+}
+
+.check-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(29,185,84,0.12);
+  border: 2px solid var(--green-go);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 28px;
+  font-size: 2.2rem;
+}
+
+.thankyou-card h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  letter-spacing: 0.03em;
+  line-height: 1.05;
+  color: var(--white);
+  margin-bottom: 16px;
+}
+.thankyou-card h1 em {
+  font-style: normal;
+  color: var(--corn);
+}
+
+.thankyou-card .subtitle {
+  font-size: 1.1rem;
+  color: #BBBBBB;
+  margin-bottom: 36px;
+  max-width: 48ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.what-next {
+  background: var(--charcoal);
+  border-radius: 8px;
+  padding: 28px 32px;
+  margin-bottom: 36px;
+  text-align: left;
+}
+.what-next-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--corn);
+  margin-bottom: 16px;
+}
+.next-steps { list-style: none; }
+.next-steps li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  font-size: 0.95rem;
+  color: #CCCCCC;
+}
+.next-steps li:last-child { border-bottom: none; }
+.step-num {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(232,19,42,0.15);
+  border: 1px solid rgba(232,19,42,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.9rem;
+  color: var(--red);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.cta-row {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+.btn {
+  display: inline-block;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 14px 32px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  border: none;
+  transition: all 0.25s;
+}
+.btn--corn { background: var(--corn); color: var(--black); }
+.btn--corn:hover { background: var(--corn-dark); color: var(--black); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(245,200,0,0.35); }
+.btn--outline { background: transparent; color: var(--white); border: 2px solid rgba(255,255,255,0.2); }
+.btn--outline:hover { border-color: var(--white); background: rgba(255,255,255,0.05); }
+
+.guarantee {
+  font-size: 0.78rem;
+  color: #555;
+  font-family: 'Barlow Condensed', sans-serif;
+  letter-spacing: 0.05em;
+}
+
+/* ── FOOTER ── */
+footer {
+  background: #050505;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 24px;
+  text-align: center;
+}
+footer p {
+  font-size: 0.8rem;
+  color: #444;
+  max-width: none;
+}
+footer a { color: #666; }
+footer a:hover { color: var(--corn); }
+
+@media (max-width: 600px) {
+  .thankyou-card { padding: 40px 24px; }
+  .what-next { padding: 20px; }
+  .cta-row { flex-direction: column; align-items: center; }
+  .btn { width: 100%; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a href="https://www.omahaseopros.com/" class="logo-text">OMAHA<span>SEO</span>PROS</a>
+    <a href="tel:18004818638" class="phone-link">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.27 9.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.85a16 16 0 006.24 6.24l1.22-1.22a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"></path></svg>
+      1-800-481-8638
+    </a>
+  </div>
+</header>
+
+<!-- MAIN -->
+<main>
+  <div class="bg-grid"></div>
+  <div class="bg-glow"></div>
+
+  <div class="thankyou-card">
+    <div class="check-circle">✓</div>
+
+    <h1>Your Request<br>Is <em>Confirmed.</em></h1>
+    <p class="subtitle">We received your strategy session request and will be reaching out shortly. Here's what happens next.</p>
+
+    <div class="what-next">
+      <p class="what-next-title">What Happens Next</p>
+      <ul class="next-steps">
+        <li>
+          <span class="step-num">1</span>
+          <span>We review your business, website, and Omaha market within 24 hours.</span>
+        </li>
+        <li>
+          <span class="step-num">2</span>
+          <span>One of our team members calls you to schedule your free strategy session.</span>
+        </li>
+        <li>
+          <span class="step-num">3</span>
+          <span>We deliver a custom audit, competitor analysis, and growth roadmap — at no cost.</span>
+        </li>
+        <li>
+          <span class="step-num">4</span>
+          <span>You decide if we're the right fit. No pressure. No obligation. Ever.</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="cta-row">
+      <a href="tel:18004818638" class="btn btn--corn">📞 Call Us Now: 1-800-481-8638</a>
+      <a href="https://www.omahaseopros.com/" class="btn btn--outline">Back to Home</a>
+    </div>
+
+    <p class="guarantee">🔒 Your information is 100% private. We never sell or share your data.</p>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Omaha SEO Pros. All rights reserved. | <a href="https://www.omahaseopros.com/">Home</a> | <a href="https://www.omahaseopros.com/sitemap.xml">Sitemap</a></p>
+</footer>
+
+</body>
+</html>
