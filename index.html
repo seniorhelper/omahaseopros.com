@@ -1132,6 +1132,147 @@ header {
 .faq-item.open .faq-a { max-height: 500px; padding-bottom: 20px; }
 .faq-a p { color: #AAAAAA; font-size: 0.97rem; }
 
+/* ── SECTION: SERVICE AREA ── */
+.service-area-section {
+  background: var(--charcoal);
+  padding: 80px 0;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+.service-area-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+.service-area-content h2 { margin-bottom: 16px; }
+.service-area-content p { color: #BBBBBB; margin-bottom: 24px; }
+
+.suburb-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  margin-top: 28px;
+}
+.suburb-col-header {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--red);
+  padding: 10px 14px 6px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.suburb-list {
+  list-style: none;
+}
+.suburb-list li {
+  font-family: 'Barlow', sans-serif;
+  font-size: 0.9rem;
+  color: #BBBBBB;
+  padding: 7px 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.2s, background 0.2s;
+}
+.suburb-list li:hover { color: var(--corn); background: rgba(245,200,0,0.04); }
+.suburb-list li::before {
+  content: '▸';
+  color: var(--red);
+  font-size: 0.65rem;
+  flex-shrink: 0;
+}
+
+.zip-panel {
+  background: var(--black);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.zip-panel-header {
+  background: var(--slate);
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.zip-panel-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #AAA;
+}
+.zip-panel-badge {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--corn);
+  background: rgba(245,200,0,0.1);
+  border: 1px solid rgba(245,200,0,0.25);
+  padding: 3px 10px;
+  border-radius: 2px;
+}
+.zip-scroll-box {
+  height: 340px;
+  overflow-y: auto;
+  padding: 12px 0;
+  scrollbar-width: thin;
+  scrollbar-color: var(--red) rgba(255,255,255,0.05);
+}
+.zip-scroll-box::-webkit-scrollbar { width: 5px; }
+.zip-scroll-box::-webkit-scrollbar-track { background: rgba(255,255,255,0.03); }
+.zip-scroll-box::-webkit-scrollbar-thumb { background: var(--red); border-radius: 3px; }
+
+.zip-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  transition: background 0.15s;
+}
+.zip-row:hover { background: rgba(232,19,42,0.06); }
+.zip-code {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.1rem;
+  color: var(--corn);
+  letter-spacing: 0.05em;
+  min-width: 60px;
+}
+.zip-city {
+  font-family: 'Barlow', sans-serif;
+  font-size: 0.88rem;
+  color: #BBBBBB;
+  flex: 1;
+  padding-left: 12px;
+}
+.zip-state {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #555;
+  min-width: 28px;
+  text-align: right;
+}
+.zip-panel-footer {
+  padding: 12px 20px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  font-size: 0.78rem;
+  color: #555;
+  font-family: 'Barlow Condensed', sans-serif;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
 /* ── SECTION: BOTTOM CTA + FORM ── */
 .bottom-cta-section {
   background: linear-gradient(135deg, var(--charcoal) 0%, #1A0000 50%, var(--charcoal) 100%);
@@ -1285,6 +1426,7 @@ footer {
   .results-grid { grid-template-columns: 1fr; }
   .bottom-cta-inner { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
+  .service-area-inner { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 640px) {
@@ -1300,6 +1442,7 @@ footer {
   .footer-bottom { flex-direction: column; text-align: center; }
   .roi-grid { grid-template-columns: 1fr 1fr; }
   .math-callout .big-num { font-size: 3.5rem; }
+  .suburb-columns { grid-template-columns: 1fr; }
 }
 </style>
 </head>
@@ -1357,7 +1500,7 @@ footer {
     <div class="form-card" id="top-form">
       <h3>Let's Grow Your Business</h3>
       <p class="form-sub">Free strategy session — no obligation, no fluff.</p>
-      <form action="https://formsubmit.co/info@eyetoad.com" method="POST">
+      <form action="https://formsubmit.co/zachwennstedt@gmail.com" method="POST">
         <input type="hidden" name="_subject" value="New Lead: OmahaSEOPros.com">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="source_site" value="omahaseopros.com">
@@ -2170,6 +2313,148 @@ footer {
   </div>
 </section>
 
+<!-- SERVICE AREA: OMAHA METRO SUBURBS + ZIP CODES -->
+<section class="service-area-section" id="service-area">
+  <div class="container">
+    <div class="section-header">
+      <span class="tag">Our Service Area</span>
+      <h2>Serving Every Corner of the Omaha Metro.</h2>
+      <p>We work with businesses across Omaha and every surrounding community in Nebraska and southwest Iowa. Whether you're in Bellevue, Papillion, Council Bluffs, or anywhere in between — we know your market.</p>
+    </div>
+
+    <div class="service-area-inner">
+      <!-- Left: Suburb lists -->
+      <div>
+        <div class="suburb-columns">
+          <div>
+            <div class="suburb-col-header">Nebraska Communities</div>
+            <ul class="suburb-list">
+              <li>Omaha</li>
+              <li>Bellevue</li>
+              <li>Papillion</li>
+              <li>La Vista</li>
+              <li>Gretna</li>
+              <li>Elkhorn</li>
+              <li>Ralston</li>
+              <li>Millard</li>
+              <li>Offutt AFB</li>
+              <li>Boys Town</li>
+              <li>Chalco</li>
+              <li>Irvington</li>
+              <li>Bennington</li>
+              <li>Valley</li>
+              <li>Springfield</li>
+              <li>Plattsmouth</li>
+              <li>Fremont</li>
+              <li>Blair</li>
+              <li>Wahoo</li>
+              <li>Ashland</li>
+            </ul>
+          </div>
+          <div>
+            <div class="suburb-col-header">Iowa Communities</div>
+            <ul class="suburb-list">
+              <li>Council Bluffs</li>
+              <li>Carter Lake</li>
+              <li>Bellevue, IA</li>
+              <li>Glenwood</li>
+              <li>Pacific Junction</li>
+              <li>Missouri Valley</li>
+              <li>Underwood</li>
+              <li>Treynor</li>
+              <li>Oakland</li>
+              <li>Harlan</li>
+            </ul>
+            <div class="suburb-col-header" style="margin-top:16px;">Also Serving</div>
+            <ul class="suburb-list">
+              <li>Lincoln, NE</li>
+              <li>Omaha Metro Area</li>
+              <li>Greater Nebraska</li>
+              <li>Nationwide Campaigns</li>
+            </ul>
+          </div>
+        </div>
+
+        <p style="font-size:0.85rem; color:#666; margin-top:24px; line-height:1.7;">Not sure if we cover your area? We do. If your customers are in Nebraska or Iowa — we can help you reach them. <a href="#get-started" style="color:var(--red);">Contact us to confirm your market.</a></p>
+      </div>
+
+      <!-- Right: Zip code scroll box -->
+      <div>
+        <div class="zip-panel">
+          <div class="zip-panel-header">
+            <span class="zip-panel-title">Omaha Metro Zip Codes Served</span>
+            <span class="zip-panel-badge">60+ Zip Codes</span>
+          </div>
+          <div class="zip-scroll-box">
+            <div class="zip-row"><span class="zip-code">68101</span><span class="zip-city">Omaha (North)</span><span class="zip-state">NE</span></div>
+            <div class="zip-row"><span class="zip-code">68102</span><span class="zip-city">Omaha (Downtown)</span><span class="zip-state">NE</span></div>
+            <div class="zip-row"><span class="zip-code">68103</span><span class="zip-city">Omaha</span><span class="zip-state">NE</span></div>
+            <div class="zip-row"><span class="zip-code">68104</span><span class="zip-city">Omaha (North Central)</span><span class="zip-state">NE</span></div>
+            <div class="zip-row"><span class="zip-code">68105</span><span class="zip-city">Omaha (Midtown South)</span><span class="zip-state">NE</span></div>
+            <div class="zip-row"><span class="zip-code">68106</span><span class="zip-city">Omaha (Midtown)</span><span class="zip-state">NE</span></div>
+            <div class="zip-row"><span class="zip-code">68107</span><span class="zip-city">Omaha (South)</span><span class="zip-state">NE</span></div>
+            <div class="zip-row"><span class="zip-code">68108</span><span class="zip-city">Omaha (South Central)</span><span class="zip-state">NE</span></div>
+            <div class="zip-row"><span class="zip-code">68110</span><span class="zip-city">Omaha (Northeast)</span><span class="zip-state">NE</span></div>
+            <div class="zip-row"><span class="zip-code">68111</span><span class="zip-city">Omaha (North)</span><span class="zip-state">NE</span></div>
+            <div class="zip-row"><span class="zip-code">68112</span><span class="zip-city">Omaha (Florence)</span><span class="zip-state">NE</span></div>
+            <div class="zip-row"><span class="zip-code">68113</span><span class="zip-city">Offutt AFB</span><span class="zip-state">NE</span></div>
+            <div class="zip-row"><span class="zip-code">68114</span><span class="zip-city">Omaha (West Central)</span><span class="zip-state">NE</span></div>
+            <div class="zip-row"><span class="zip-code">68116</span><span class="zip-city">Omaha (Elkhorn Area)</span><span class="zip-state">NE</span></div>
+            <div class="zip-row"><span class="zip-code">68117</span><span class="zip-city">Omaha (Ralston Area)</span><span class="zip-state">NE</span></div>
+            <div class="zip-row"><span class="zip-code">68118</span><span class="zip-city">Omaha (West)</span><span class="zip-state">NE</span></div>
+            <div class="zip-row"><span class="zip-code">68122</span><span class="zip-city">Omaha (Irvington)</span><span class="zip-state">NE</span></div>
+            <div class="zip-row"><span class="zip-code">68123</span><span class="zip-city">Bellevue</span><span class="zip-state">NE</span></div>
+            <div class="zip-row"><span class="zip-code">68124</span><span class="zip-city">Omaha (Dundee Area)</span><span class="zip-state">NE</span></div>
+            <div class="zip-row"><span class="zip-code">68127</span><span class="zip-city">Omaha (Millard Area)</span><span class="zip-state">NE</span></div>
+            <div class="zip-row"><span class="zip-code">68128</span><span class="zip-city">La Vista</span><span class="zip-state">NE</span></div>
+            <div class="zip-row"><span class="zip-code">68130</span><span class="zip-city">Omaha (West Elkhorn)</span><span class="zip-state">NE</span></div>
+            <div class="zip-row"><span class="zip-code">68131</span><span class="zip-city">Omaha (Midtown North)</span><span class="zip-state">NE</span></div>
+            <div class="zip-row"><span class="zip-code">68132</span><span class="zip-city">Omaha (Dundee / Blackstone)</span><span class="zip-state">NE</span></div>
+            <div class="zip-row"><span class="zip-code">68133</span><span class="zip-city">Papillion</span><span class="zip-state">NE</span></div>
+            <div class="zip-row"><span class="zip-code">68134</span><span class="zip-city">Omaha (Northwest)</span><span class="zip-state">NE</span></div>
+            <div class="zip-row"><span class="zip-code">68135</span><span class="zip-city">Omaha (Millard South)</span><span class="zip-state">NE</span></div>
+            <div class="zip-row"><span class="zip-code">68136</span><span class="zip-city">Omaha (Millard West)</span><span class="zip-state">NE</span></div>
+            <div class="zip-row"><span class="zip-code">68137</span><span class="zip-city">Omaha (Millard East)</span><span class="zip-state">NE</span></div>
+            <div class="zip-row"><span class="zip-code">68138</span><span class="zip-city">Omaha (Chalco)</span><span class="zip-state">NE</span></div>
+            <div class="zip-row"><span class="zip-code">68142</span><span class="zip-city">Omaha (Bennington Area)</span><span class="zip-state">NE</span></div>
+            <div class="zip-row"><span class="zip-code">68144</span><span class="zip-city">Omaha (Westroads Area)</span><span class="zip-state">NE</span></div>
+            <div class="zip-row"><span class="zip-code">68147</span><span class="zip-city">Bellevue / Ralston</span><span class="zip-state">NE</span></div>
+            <div class="zip-row"><span class="zip-code">68152</span><span class="zip-city">Omaha (North — Boys Town Area)</span><span class="zip-state">NE</span></div>
+            <div class="zip-row"><span class="zip-code">68154</span><span class="zip-city">Omaha (West — 180th St Area)</span><span class="zip-state">NE</span></div>
+            <div class="zip-row"><span class="zip-code">68157</span><span class="zip-city">Omaha (South Millard)</span><span class="zip-state">NE</span></div>
+            <div class="zip-row"><span class="zip-code">68164</span><span class="zip-city">Omaha (Northwest)</span><span class="zip-state">NE</span></div>
+            <div class="zip-row"><span class="zip-code">68178</span><span class="zip-city">Omaha (Boys Town)</span><span class="zip-state">NE</span></div>
+            <div class="zip-row"><span class="zip-code">68046</span><span class="zip-city">Papillion</span><span class="zip-state">NE</span></div>
+            <div class="zip-row"><span class="zip-code">68028</span><span class="zip-city">Gretna</span><span class="zip-state">NE</span></div>
+            <div class="zip-row"><span class="zip-code">68022</span><span class="zip-city">Elkhorn</span><span class="zip-state">NE</span></div>
+            <div class="zip-row"><span class="zip-code">68007</span><span class="zip-city">Bennington</span><span class="zip-state">NE</span></div>
+            <div class="zip-row"><span class="zip-code">68064</span><span class="zip-city">Valley</span><span class="zip-state">NE</span></div>
+            <div class="zip-row"><span class="zip-code">68069</span><span class="zip-city">Waterloo</span><span class="zip-state">NE</span></div>
+            <div class="zip-row"><span class="zip-code">68010</span><span class="zip-city">Blair</span><span class="zip-state">NE</span></div>
+            <div class="zip-row"><span class="zip-code">68025</span><span class="zip-city">Fremont</span><span class="zip-state">NE</span></div>
+            <div class="zip-row"><span class="zip-code">68048</span><span class="zip-city">Plattsmouth</span><span class="zip-state">NE</span></div>
+            <div class="zip-row"><span class="zip-code">68003</span><span class="zip-city">Ashland</span><span class="zip-state">NE</span></div>
+            <div class="zip-row"><span class="zip-code">68066</span><span class="zip-city">Wahoo</span><span class="zip-state">NE</span></div>
+            <div class="zip-row"><span class="zip-code">68147</span><span class="zip-city">Springfield</span><span class="zip-state">NE</span></div>
+            <div class="zip-row"><span class="zip-code">51501</span><span class="zip-city">Council Bluffs</span><span class="zip-state">IA</span></div>
+            <div class="zip-row"><span class="zip-code">51503</span><span class="zip-city">Council Bluffs (East)</span><span class="zip-state">IA</span></div>
+            <div class="zip-row"><span class="zip-code">51510</span><span class="zip-city">Carter Lake</span><span class="zip-state">IA</span></div>
+            <div class="zip-row"><span class="zip-code">51521</span><span class="zip-city">Avoca</span><span class="zip-state">IA</span></div>
+            <div class="zip-row"><span class="zip-code">51534</span><span class="zip-city">Glenwood</span><span class="zip-state">IA</span></div>
+            <div class="zip-row"><span class="zip-code">51540</span><span class="zip-city">Harlan</span><span class="zip-state">IA</span></div>
+            <div class="zip-row"><span class="zip-code">51554</span><span class="zip-city">Missouri Valley</span><span class="zip-state">IA</span></div>
+            <div class="zip-row"><span class="zip-code">51558</span><span class="zip-city">Oakland</span><span class="zip-state">IA</span></div>
+            <div class="zip-row"><span class="zip-code">51560</span><span class="zip-city">Pacific Junction</span><span class="zip-state">IA</span></div>
+            <div class="zip-row"><span class="zip-code">51576</span><span class="zip-city">Treynor</span><span class="zip-state">IA</span></div>
+            <div class="zip-row"><span class="zip-code">51579</span><span class="zip-city">Underwood</span><span class="zip-state">IA</span></div>
+          </div>
+          <div class="zip-panel-footer">Scroll to see all zip codes · We serve the entire Omaha metro and surrounding region</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- BOTTOM CTA + FORM -->
 <section class="bottom-cta-section" id="get-started">
   <div class="container">
@@ -2196,7 +2481,7 @@ footer {
       <div class="bottom-form-card">
         <h3>Claim Your Free Strategy Session</h3>
         <p class="form-sub">Takes 2 minutes. Results last years.</p>
-        <form action="https://formsubmit.co/info@eyetoad.com" method="POST">
+        <form action="https://formsubmit.co/zachwennstedt@gmail.com" method="POST">
           <input type="hidden" name="_subject" value="New Lead: OmahaSEOPros.com — Bottom Form">
           <input type="hidden" name="_captcha" value="false">
           <input type="hidden" name="source_site" value="omahaseopros.com">
@@ -2271,13 +2556,13 @@ footer {
       <div>
         <p class="footer-nav-title">Nebraska Markets</p>
         <ul class="footer-links">
-          <li><a href="#">Omaha, NE</a></li>
-          <li><a href="#">Lincoln, NE</a></li>
-          <li><a href="#">Bellevue, NE</a></li>
-          <li><a href="#">Papillion, NE</a></li>
-          <li><a href="#">La Vista, NE</a></li>
-          <li><a href="#">Fremont, NE</a></li>
-          <li><a href="#">Council Bluffs, IA</a></li>
+          <li><a href="#service-area">Omaha, NE</a></li>
+          <li><a href="#service-area">Lincoln, NE</a></li>
+          <li><a href="#service-area">Bellevue, NE</a></li>
+          <li><a href="#service-area">Papillion, NE</a></li>
+          <li><a href="#service-area">La Vista, NE</a></li>
+          <li><a href="#service-area">Fremont, NE</a></li>
+          <li><a href="#service-area">Council Bluffs, IA</a></li>
         </ul>
         <p class="footer-nav-title" style="margin-top:24px;">Site</p>
         <ul class="footer-links">
