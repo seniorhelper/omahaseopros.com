@@ -1560,11 +1560,9 @@ footer {
     <div class="form-card" id="top-form">
       <h3>Let's Grow Your Business</h3>
       <p class="form-sub">Free strategy session — no obligation, no fluff.</p>
-      <form action="https://formsubmit.co/info@eyetoad.com" method="POST">
+      <form id="heroForm" onsubmit="handleHeroForm(event)">
         <input type="hidden" name="_subject" value="New Lead: OmahaSEOPros.com">
-        <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="source_site" value="omahaseopros.com">
-        <input type="hidden" name="_next" value="https://www.omahaseopros.com/thank-you.html">
         <input type="text" name="_honey" style="display:none;">
 
         <div class="form-group">
@@ -1594,7 +1592,8 @@ footer {
             <option value="custom">I Need a Custom Plan — Let's Talk</option>
           </select>
         </div>
-        <button type="submit" class="form-submit-btn">Get My Free Strategy Session →</button>
+        <button type="submit" id="heroBtn" class="form-submit-btn">Get My Free Strategy Session →</button>
+        <p id="heroMsg" style="display:none; margin-top:10px; font-size:0.9rem; font-weight:700; color:var(--green-go);"></p>
       </form>
       <p class="form-guarantee">🔒 No spam. No obligation. 100% confidential.</p>
     </div>
@@ -2541,11 +2540,9 @@ footer {
       <div class="bottom-form-card">
         <h3>Claim Your Free Strategy Session</h3>
         <p class="form-sub">Takes 2 minutes. Results last years.</p>
-        <form action="https://formsubmit.co/info@eyetoad.com" method="POST">
+        <form id="bottomForm" onsubmit="handleBottomForm(event)">
           <input type="hidden" name="_subject" value="New Lead: OmahaSEOPros.com — Bottom Form">
-          <input type="hidden" name="_captcha" value="false">
           <input type="hidden" name="source_site" value="omahaseopros.com">
-          <input type="hidden" name="_next" value="https://www.omahaseopros.com/thank-you.html">
           <input type="text" name="_honey" style="display:none;">
 
           <div class="form-group">
@@ -2579,7 +2576,8 @@ footer {
             <label for="message-bot">Anything Else We Should Know?</label>
             <textarea id="message-bot" name="user_message" placeholder="Tell us about your business, competitors, or goals..."></textarea>
           </div>
-          <button type="submit" class="form-submit-btn">Send My Free Strategy Request →</button>
+          <button type="submit" id="bottomBtn" class="form-submit-btn">Send My Free Strategy Request →</button>
+          <p id="bottomMsg" style="display:none; margin-top:10px; font-size:0.9rem; font-weight:700; color:var(--green-go);"></p>
         </form>
         <p class="form-guarantee">🔒 Your info is 100% private. We never sell data.</p>
       </div>
@@ -2652,6 +2650,63 @@ footer {
 </div>
 
 <script>
+// ─── HERO FORM ───
+async function handleHeroForm(e) {
+  e.preventDefault();
+  const honey = document.querySelector('#heroForm input[name="_honey"]');
+  if (honey && honey.value) return;
+  const btn = document.getElementById('heroBtn');
+  const msg = document.getElementById('heroMsg');
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+  const data = new FormData(document.getElementById('heroForm'));
+  try {
+    const res = await fetch('https://formsubmit.co/ajax/info@eyetoad.com', {
+      method: 'POST', body: data, headers: { 'Accept': 'application/json' }
+    });
+    const json = await res.json();
+    if (json.success === 'true' || json.success === true) {
+      document.getElementById('heroForm').reset();
+      document.getElementById('thankyou-overlay').classList.add('active');
+    } else throw new Error();
+  } catch {
+    msg.style.display = 'block';
+    msg.style.color = '#ff6b6b';
+    msg.textContent = '⚠️ Something went wrong. Please call 1-800-481-8638 directly.';
+  }
+  btn.disabled = false;
+  btn.textContent = 'Get My Free Strategy Session →';
+}
+
+// ─── BOTTOM FORM ───
+async function handleBottomForm(e) {
+  e.preventDefault();
+  const honey = document.querySelector('#bottomForm input[name="_honey"]');
+  if (honey && honey.value) return;
+  const btn = document.getElementById('bottomBtn');
+  const msg = document.getElementById('bottomMsg');
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+  const data = new FormData(document.getElementById('bottomForm'));
+  try {
+    const res = await fetch('https://formsubmit.co/ajax/info@eyetoad.com', {
+      method: 'POST', body: data, headers: { 'Accept': 'application/json' }
+    });
+    const json = await res.json();
+    if (json.success === 'true' || json.success === true) {
+      document.getElementById('bottomForm').reset();
+      document.getElementById('thankyou-overlay').classList.add('active');
+    } else throw new Error();
+  } catch {
+    msg.style.display = 'block';
+    msg.style.color = '#ff6b6b';
+    msg.textContent = '⚠️ Something went wrong. Please call 1-800-481-8638 directly.';
+  }
+  btn.disabled = false;
+  btn.textContent = 'Send My Free Strategy Request →';
+}
+
+// ─── FAQ ───
 function toggleFaq(btn) {
   var item = btn.closest('.faq-item');
   var isOpen = item.classList.contains('open');
@@ -2659,13 +2714,7 @@ function toggleFaq(btn) {
   if (!isOpen) item.classList.add('open');
 }
 
-// Thank-you modal on ?thank-you=1
-if (window.location.search.includes('thank-you=1')) {
-  document.getElementById('thankyou-overlay').classList.add('active');
-  window.history.replaceState({}, document.title, window.location.pathname);
-}
-
-// Smooth scroll for anchor links
+// ─── SMOOTH SCROLL ───
 document.querySelectorAll('a[href^="#"]').forEach(function(a) {
   a.addEventListener('click', function(e) {
     var target = document.querySelector(this.getAttribute('href'));
