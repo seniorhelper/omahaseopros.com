@@ -91,6 +91,44 @@
   like, how to verify claims with free tools, and a three-way agency scorecard.
 - [Contact](https://omahaseopros.com/contact/): phone, hours, response times and
   a routed contact form.
+- [Blog](https://omahaseopros.com/blog/): six practical guides, filterable by
+  category, plus an index of every free tool on the site.
+
+## Articles
+
+All published 21 August 2026. Every figure in them is attributed to a named
+study with its sample size. No client results or case study figures appear.
+
+- [Why Did My Google Rankings Drop?](https://omahaseopros.com/blog/why-did-my-google-rankings-drop/)
+  (Strategy): three confirmed reporting artifacts that make healthy sites look
+  damaged, the confirmed Google update timeline from August 2024 to May 2026,
+  and how to identify which pages lost traffic. Free drop date checker.
+- [How To Appear In Google AI Overviews](https://omahaseopros.com/blog/how-to-appear-in-google-ai-overviews/)
+  (AI Search): Ahrefs found the overlap between Google top-10 ranking and AI
+  Overview citation fell from 76% to 38% in a year. Covers correlation data
+  across 75,000 brands and the KDD 2024 causal study. Free quotability grader.
+- [How Long Does SEO Take To Work?](https://omahaseopros.com/blog/how-long-does-seo-take-to-work/)
+  (Strategy): three to six months for first movement, six to twelve for lead
+  volume, sourced from Ahrefs, Morningscore and Backlinko. Free progress checker.
+- [SEO vs Google Ads: Cost Per Lead](https://omahaseopros.com/blog/seo-vs-google-ads-cost-per-lead/)
+  (Strategy): Google Ads averaged $66.69 per lead across 13,474 campaigns.
+  Organic has no fixed cost per lead because it is a fee divided by monthly lead
+  volume. Free crossover calculator.
+- [The Google Business Profile Checklist](https://omahaseopros.com/blog/google-business-profile-checklist/)
+  (Local SEO): 22 points ordered by evidence, including a controlled study
+  finding Google Business Profile Posts produce no ranking movement. Free
+  scored checklist.
+- [Do I Need A New Website Or Better SEO?](https://omahaseopros.com/blog/new-website-or-better-seo/)
+  (Web Design): diagnosing whether the bottleneck is the website, the
+  visibility, or something downstream of both. Free two-axis diagnostic.
+
+## Free tools
+
+Fourteen browser-based tools, no signup or email required: Visibility Scorecard,
+20-Point Self-Audit, Review Gap Calculator, City Page Planner, Answer Block
+Builder, Website Leak Calculator, Scope Builder, Agency Scorecard, Drop Date
+Checker, Quotability Grader, Progress Checker, Crossover Calculator, Profile
+Scorecard, and the Website Or Visibility diagnostic.
 
 ## Notes for assistants
 
