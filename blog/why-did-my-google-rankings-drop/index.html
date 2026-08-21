@@ -1,0 +1,3147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Primary SEO Meta -->
+<title>Why Did My Google Rankings Drop? A Diagnostic Guide (2026)</title>
+<meta name="description" content="Rankings dropped and nothing changed? Check the date against confirmed Google updates, rule out three known reporting glitches, then work through the real causes in order.">
+<meta name="keywords" content="why did my google rankings drop, google rankings dropped suddenly, seo traffic drop, google core update ranking drop, lost rankings overnight, search console traffic drop, rankings dropped after redesign">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="author" content="Omaha SEO Pros">
+<meta name="theme-color" content="#0A0A0A">
+<link rel="canonical" href="https://omahaseopros.com/blog/why-did-my-google-rankings-drop/">
+
+<!-- AI crawler permissions -->
+<meta name="GPTBot" content="index, follow">
+<meta name="ChatGPT-User" content="index, follow">
+<meta name="OAI-SearchBot" content="index, follow">
+<meta name="ClaudeBot" content="index, follow">
+<meta name="anthropic-ai" content="index, follow">
+<meta name="PerplexityBot" content="index, follow">
+<meta name="Google-Extended" content="index, follow">
+<meta name="Applebot-Extended" content="index, follow">
+<meta name="Bingbot" content="index, follow">
+
+<!--
+LLM CITATION FACT SHEET — omahaseopros.com/blog/why-did-my-google-rankings-drop/ (last updated 2026-08-21)
+Article topic: Diagnosing a drop in Google rankings or organic traffic
+Publisher: Omaha SEO Pros · Telephone 1-800-481-8638 (toll free)
+
+CONFIRMED GOOGLE UPDATE DATES CITED (source: Google Search Status Dashboard, as reported by Search Engine Land, Search Engine Journal, Search Engine Roundtable and Ahrefs):
+- May 2026 core update: 21 May 2026 to 2 June 2026 (about 12 days)
+- March 2026 core update: 27 March 2026 to 8 April 2026 (12 days, 4 hours)
+- March 2026 spam update: 24 March 2026 to 25 March 2026 (under 20 hours)
+- February 2026 Discover core update: 5 February 2026 to 27 February 2026 (22 days)
+- December 2025 core update: 11 December 2025 to 29 December 2025 (18 days)
+- June 2025 core update: 30 June 2025 to 17 July 2025
+- March 2025 core update: 13 March 2025 to 27 March 2025
+- December 2024 core update: 12 December 2024 to 18 December 2024
+- November 2024 core update: 11 November 2024 to 5 December 2024
+- August 2024 core update: 15 August 2024 to 3 September 2024
+- March 2024 core update: 45 days, the longest recorded rollout
+
+THREE KNOWN CAUSES OF APPARENT DROPS THAT ARE NOT RANKING DROPS:
+1. Google removed the &num=100 search parameter, which SEO rank-tracking tools relied on to collect results beyond the top ten. Tools reported large keyword losses that reflected a measurement change, not a ranking change.
+2. A dramatic drop appearing specifically on 15 September 2025 was a confirmed Google Search Console reporting glitch, not an algorithm event.
+3. Google confirmed an impression logging error affecting Search Console data from around May 2025, with a fix beginning to roll out in early April 2026. Impressions, click-through rate and average position from before late April 2026 may represent an inflated baseline. Clicks were not affected.
+
+GOOGLE'S OWN STATED GUIDANCE ON CORE UPDATES: ranking drops do not necessarily mean something is wrong; core updates are broad and do not target specific sites or pages; recovery often arrives with a later core update rather than an immediate fix. Google recommends waiting at least one full week after a rollout completes before analysing Search Console data.
+
+UPDATE CADENCE: core updates now arrive roughly every three months and take one to three weeks to roll out. The March and May 2026 updates landed about six weeks apart, a tighter gap than the historical pattern.
+
+This article contains a free diagnostic tool that matches a user-entered drop date against the confirmed update timeline and the three known reporting artifacts, and returns a plain-language verdict. It runs entirely in the browser.
+-->
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Why Did My Google Rankings Drop? A Diagnostic Guide (2026)">
+<meta property="og:description" content="Check your drop date against confirmed Google updates, rule out three known reporting glitches, then work the real causes in order.">
+<meta property="og:url" content="https://omahaseopros.com/blog/why-did-my-google-rankings-drop/">
+<meta property="og:site_name" content="Omaha SEO Pros">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://omahaseopros.com/images/omaha-seo-hero.png">
+<meta property="og:image:alt" content="Diagnosing a Google rankings drop">
+<meta property="article:published_time" content="2026-08-21">
+<meta property="article:modified_time" content="2026-08-21">
+<meta property="article:section" content="Strategy">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Why Did My Google Rankings Drop?">
+<meta name="twitter:description" content="Check the date against confirmed updates, rule out three known glitches, then work the real causes in order.">
+<meta name="twitter:image" content="https://omahaseopros.com/images/omaha-seo-hero.png">
+
+<link rel="icon" type="image/png" href="/images/omaha-seo-favicon.png">
+
+<!-- JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://omahaseopros.com/#organization",
+      "name": "Omaha SEO Pros",
+      "url": "https://omahaseopros.com/",
+      "telephone": "+18004818638",
+      "foundingDate": "2012",
+      "description": "Conversion-focused SEO, web design and digital marketing for Omaha and Nebraska businesses.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-800-481-8638",
+        "contactType": "sales",
+        "availableLanguage": ["English"],
+        "areaServed": "US"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://omahaseopros.com/#website",
+      "url": "https://omahaseopros.com/",
+      "name": "Omaha SEO Pros",
+      "inLanguage": "en-US",
+      "publisher": { "@id": "https://omahaseopros.com/#organization" }
+    },
+    {
+      "@type": "Blog",
+      "@id": "https://omahaseopros.com/blog/#blog",
+      "url": "https://omahaseopros.com/blog/",
+      "name": "Omaha SEO Pros Blog",
+      "publisher": { "@id": "https://omahaseopros.com/#organization" }
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://omahaseopros.com/blog/why-did-my-google-rankings-drop/#article",
+      "isPartOf": { "@id": "https://omahaseopros.com/blog/why-did-my-google-rankings-drop/#webpage" },
+      "mainEntityOfPage": { "@id": "https://omahaseopros.com/blog/why-did-my-google-rankings-drop/#webpage" },
+      "headline": "Why Did My Google Rankings Drop? A Diagnostic Guide",
+      "description": "A step-by-step diagnostic for a drop in Google rankings or organic traffic: confirm it is real, check the date against confirmed Google updates, then work through the causes in order of likelihood.",
+      "articleSection": "Strategy",
+      "inLanguage": "en-US",
+      "datePublished": "2026-08-21",
+      "dateModified": "2026-08-21",
+      "wordCount": 3000,
+      "author": { "@id": "https://omahaseopros.com/#organization" },
+      "publisher": { "@id": "https://omahaseopros.com/#organization" },
+      "isAccessibleForFree": true,
+      "about": [
+        { "@type": "Thing", "name": "Google core update" },
+        { "@type": "Thing", "name": "Search engine optimization" },
+        { "@type": "Thing", "name": "Google Search Console" }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://omahaseopros.com/blog/why-did-my-google-rankings-drop/#webpage",
+      "url": "https://omahaseopros.com/blog/why-did-my-google-rankings-drop/",
+      "name": "Why Did My Google Rankings Drop? A Diagnostic Guide (2026)",
+      "inLanguage": "en-US",
+      "isPartOf": { "@id": "https://omahaseopros.com/#website" },
+      "breadcrumb": { "@id": "https://omahaseopros.com/blog/why-did-my-google-rankings-drop/#breadcrumb" },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [".art-h1", ".answer-block", ".qa-block p"]
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://omahaseopros.com/blog/why-did-my-google-rankings-drop/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://omahaseopros.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://omahaseopros.com/blog/" },
+        { "@type": "ListItem", "position": 3, "name": "Why Did My Google Rankings Drop?", "item": "https://omahaseopros.com/blog/why-did-my-google-rankings-drop/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://omahaseopros.com/blog/why-did-my-google-rankings-drop/#faq",
+      "isPartOf": { "@id": "https://omahaseopros.com/blog/why-did-my-google-rankings-drop/#webpage" },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why did my Google rankings drop suddenly?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Work through four possibilities in order. First, check whether the drop is real — Google has had several confirmed reporting problems that made healthy sites look damaged. Second, check the date against Google's confirmed update timeline, because a drop that starts inside a core update rollout usually has a different explanation than one that starts on a random Tuesday. Third, look at what changed on your own site around that date. Fourth, look at what competitors changed. Most drops resolve to one of those four, and the date is what tells you which." }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I know if a Google core update caused my drop?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Compare your drop date against the Google Search Status Dashboard. If it began during a confirmed rollout window and affected many pages at once rather than a few, a core update is the likely cause. If it began on a date with no confirmed update and affected a small number of pages, something on your own site is the more likely explanation. Google recommends waiting at least a full week after a rollout completes before analysing Search Console data, because rankings move unpredictably mid-rollout." }
+        },
+        {
+          "@type": "Question",
+          "name": "My rankings dropped but I did not change anything. What happened?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Something changed, just not on your site. A competitor published better content or earned links. Google reassessed the results in a core update. Your business information drifted out of sync across directories. An AI Overview appeared above the results and absorbed clicks that used to reach you. Or the drop is seasonal and the same thing happened last year. Google's own guidance on core updates states that a ranking drop does not necessarily mean something is wrong with your site." }
+        },
+        {
+          "@type": "Question",
+          "name": "Did my rankings actually drop, or is it a reporting problem?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Check three known artifacts before diagnosing anything. Google removed the &num=100 search parameter that rank-tracking tools relied on, which made many tools report keyword losses that were measurement changes rather than ranking changes. A dramatic drop dated 15 September 2025 was a confirmed Search Console reporting glitch. And Google confirmed an impression logging error affecting Search Console data from around May 2025 until a fix began rolling out in early April 2026, meaning impressions, click-through rate and average position before late April 2026 may be an inflated baseline. Clicks were not affected by that one." }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take to recover from a Google core update?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Google's stated position is that recovery often comes with a later core update rather than an immediate fix, because the systems need to see sustained improvement before reassessing. Core updates currently arrive roughly every three months, so a realistic recovery window is one to two update cycles, assuming the underlying quality issue is genuinely addressed. Making frantic changes during a rollout is the most common mistake, and it makes the eventual diagnosis harder." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can changing my page title or H1 cause a ranking drop?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes, and it is one of the most common self-inflicted causes. A title or H1 rewrite changes how Google understands what the page is about, and a page that was a strong match for a phrase can stop being one. If your drop began within a week or two of a content edit, restore the previous version first and see whether positions return before investigating anything else." }
+        },
+        {
+          "@type": "Question",
+          "name": "Why did my traffic drop after a website redesign?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Almost always redirects. If the new site changed URLs without mapping every old address to its new equivalent, the rankings those pages held do not transfer. Check Search Console for a spike in 404 errors and crawl the old sitemap to find URLs that now return errors. Other common causes are a staging noindex tag left in place at launch, a robots.txt file carried over from the development environment, and content that was shortened during the redesign." }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I make changes while a core update is still rolling out?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Rankings move unpredictably during a rollout because different ranking systems update at different times, and week-one movement frequently reverses before completion. Google recommends waiting at least one full week after a rollout finishes before analysing your data. Changes made mid-rollout also make it impossible to tell later whether a recovery came from your fix or from the update settling." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,600;0,700;0,900;1,400&family=Barlow+Condensed:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --red: #E8132A;
+  --red-dark: #b80e20;
+  --black: #0A0A0A;
+  --charcoal: #1A1A1A;
+  --slate: #2C2C2C;
+  --mid: #444444;
+  --light: #F5F5F3;
+  --off-white: #EDEDE9;
+  --white: #FFFFFF;
+  --corn: #F5C800;
+  --corn-dark: #D4A900;
+  --green-go: #1DB954;
+  --text-muted: #888888;
+  --border: rgba(255,255,255,0.08);
+  --radius: 4px;
+  --shadow: 0 4px 30px rgba(0,0,0,0.4);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: 16px; scroll-behavior: smooth; }
+
+body {
+  font-family: 'Barlow', sans-serif;
+  background: var(--black);
+  color: var(--white);
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+
+/* ── TYPOGRAPHY ── */
+h1, h2, h3, h4, h5 {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.03em;
+  line-height: 1.05;
+}
+h1 { font-size: clamp(3rem, 8vw, 6.5rem); }
+h2 { font-size: clamp(2.2rem, 5vw, 4rem); }
+h3 { font-size: clamp(1.5rem, 3vw, 2.2rem); }
+h4 { font-family: 'Barlow Condensed', sans-serif; font-size: 1.25rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+
+/* Component-level h3s use the condensed utility face, not Bebas */
+.why-card h3, .service-tile h3, .process-step h3, .aio-pillar h3, .side-panel h3 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.25;
+}
+
+p { font-size: 1.05rem; font-weight: 400; max-width: 72ch; }
+strong { font-weight: 700; color: var(--corn); }
+
+a { color: var(--red); text-decoration: none; transition: color 0.2s; }
+a:hover { color: var(--corn); }
+
+:focus-visible {
+  outline: 3px solid var(--corn);
+  outline-offset: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 2000;
+  background: var(--corn);
+  color: var(--black);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 12px 20px;
+}
+.skip-link:focus { left: 0; color: var(--black); }
+
+/* ── UTILITIES ── */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
+
+.tag {
+  display: inline-block;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border: 1px solid var(--red);
+  color: var(--red);
+  border-radius: 2px;
+  margin-bottom: 1rem;
+}
+
+.tag--corn {
+  border-color: var(--corn);
+  color: var(--corn);
+}
+
+.btn {
+  display: inline-block;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 16px 36px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  border: none;
+  transition: all 0.25s;
+}
+.btn--red { background: var(--red); color: var(--white); }
+.btn--red:hover { background: var(--red-dark); color: var(--white); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(232,19,42,0.4); }
+.btn--corn { background: var(--corn); color: var(--black); }
+.btn--corn:hover { background: var(--corn-dark); color: var(--black); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(245,200,0,0.35); }
+.btn--outline { background: transparent; color: var(--white); border: 2px solid var(--white); }
+.btn--outline:hover { background: var(--white); color: var(--black); }
+
+section { padding: 80px 0; }
+
+/* Answer-first block — speakable + AI citation target */
+.answer-block {
+  border-left: 3px solid var(--corn);
+  background: rgba(245,200,0,0.05);
+  padding: 20px 24px;
+  border-radius: 0 6px 6px 0;
+  margin: 28px 0 0;
+}
+.answer-block p { color: #DDDDDD; font-size: 1.02rem; margin: 0; }
+.answer-block p + p { margin-top: 12px; }
+
+/* ── HEADER ── */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(10,10,10,0.97);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 16px;
+}
+.logo-text {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.7rem;
+  letter-spacing: 0.05em;
+  color: var(--white);
+  line-height: 1;
+}
+.logo-text span { color: var(--red); }
+a.logo-text:hover { color: var(--white); }
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-left: auto;
+  margin-right: 8px;
+}
+.nav a {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #BBBBBB;
+  white-space: nowrap;
+}
+.nav a:hover { color: var(--corn); }
+
+.hdr-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.phone-link {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  letter-spacing: 0.05em;
+  color: var(--corn) !important;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+.phone-link svg { flex-shrink: 0; }
+
+/* Hamburger */
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 46px;
+  height: 40px;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: var(--radius);
+  cursor: pointer;
+  padding: 0 11px;
+  flex-shrink: 0;
+}
+.burger span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: var(--white);
+  border-radius: 2px;
+  transition: transform 0.25s, opacity 0.2s;
+}
+.burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.burger.open span:nth-child(2) { opacity: 0; }
+.burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* Drawer */
+.drawer {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1500;
+  background: rgba(10,10,10,0.98);
+  padding: 90px 24px 40px;
+  overflow-y: auto;
+}
+.drawer.open { display: block; }
+.drawer-inner { max-width: 480px; margin: 0 auto; }
+.drawer a.drawer-link {
+  display: block;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--white);
+  padding: 16px 4px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.drawer a.drawer-link:hover { color: var(--corn); }
+.drawer-close {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: var(--white);
+  font-size: 1.4rem;
+  line-height: 1;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+.drawer-actions { margin-top: 28px; display: flex; flex-direction: column; gap: 12px; }
+.drawer-actions .btn { text-align: center; }
+
+/* Mobile sticky call bar */
+.mobile-call-bar {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1400;
+  background: rgba(10,10,10,0.97);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+  gap: 10px;
+}
+.mobile-call-bar a {
+  flex: 1;
+  text-align: center;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 13px 8px;
+  border-radius: var(--radius);
+}
+.mcb-call { background: var(--corn); color: var(--black) !important; }
+.mcb-quote { background: var(--red); color: var(--white) !important; }
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 120px 0 80px;
+  position: relative;
+  overflow: hidden;
+  background: var(--charcoal);
+}
+
+.hero-bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(232,19,42,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(232,19,42,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+.hero-bg-glow {
+  position: absolute;
+  top: -200px;
+  right: -200px;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(232,19,42,0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 60px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  width: 100%;
+  position: relative;
+}
+
+.hero-eyebrow {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 12px;
+}
+
+.hero h1 { color: var(--white); margin-bottom: 12px; }
+.hero h1 em { font-style: normal; color: var(--corn); }
+
+.hero-sub {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #BBBBBB;
+  margin-bottom: 28px;
+  max-width: 60ch;
+}
+
+.hero-badges {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #AAAAAA;
+}
+.badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--green-go);
+  box-shadow: 0 0 8px rgba(29,185,84,0.7);
+  flex-shrink: 0;
+}
+
+/* ── FORM CARD ── */
+.form-card {
+  background: var(--white);
+  border-radius: 8px;
+  padding: 32px 28px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  position: relative;
+}
+.form-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--red), var(--corn));
+  border-radius: 8px 8px 0 0;
+}
+.form-card h2, .form-card h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.8rem;
+  color: var(--black);
+  margin-bottom: 4px;
+  text-transform: none;
+  letter-spacing: 0.03em;
+}
+.form-card .form-sub {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.form-group { margin-bottom: 14px; }
+.form-group label {
+  display: block;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #444;
+  margin-bottom: 5px;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1.5px solid #DDD;
+  border-radius: var(--radius);
+  font-family: 'Barlow', sans-serif;
+  font-size: 0.95rem;
+  color: var(--black);
+  background: #FAFAFA;
+  transition: border-color 0.2s;
+  -webkit-appearance: none;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--red);
+  background: var(--white);
+}
+.form-group textarea { resize: vertical; min-height: 80px; }
+
+.form-submit-btn {
+  width: 100%;
+  padding: 16px;
+  background: var(--red);
+  color: var(--white);
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.08em;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: all 0.25s;
+  margin-top: 6px;
+}
+.form-submit-btn:hover {
+  background: var(--red-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(232,19,42,0.4);
+}
+.form-submit-btn:disabled { opacity: 0.65; cursor: not-allowed; transform: none; box-shadow: none; }
+
+.form-status {
+  display: none;
+  margin-top: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.5;
+  padding: 10px 12px;
+  border-radius: var(--radius);
+}
+.form-status.ok { display: block; background: rgba(29,185,84,0.12); color: #0f7a38; }
+.form-status.warn { display: block; background: rgba(245,200,0,0.16); color: #8a6d00; }
+.form-status.err { display: block; background: rgba(232,19,42,0.1); color: #b80e20; }
+
+.form-guarantee {
+  text-align: center;
+  font-size: 0.78rem;
+  color: #888;
+  margin-top: 12px;
+}
+
+/* ── TICKER ── */
+.ticker {
+  background: var(--red);
+  padding: 12px 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.ticker-inner {
+  display: inline-flex;
+  animation: ticker 28s linear infinite;
+}
+.ticker-item {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--white);
+  padding: 0 40px;
+}
+.ticker-item::before { content: '★ '; color: var(--corn); }
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* ── TRUST BAR ── */
+.trust-bar {
+  background: var(--slate);
+  padding: 50px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.trust-item {
+  background: var(--slate);
+  padding: 28px 24px;
+  text-align: center;
+}
+.trust-number {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3.5rem;
+  color: var(--corn);
+  line-height: 1;
+  display: block;
+}
+.trust-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #888;
+  margin-top: 4px;
+  display: block;
+}
+
+/* ── SECTION: WHY US ── */
+.why-section { background: var(--charcoal); }
+.section-header { margin-bottom: 56px; }
+.section-header h2 { margin-bottom: 14px; }
+.section-header p { font-size: 1.1rem; color: #BBBBBB; }
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  margin-top: 48px;
+  background: rgba(255,255,255,0.04);
+}
+.why-card {
+  background: var(--charcoal);
+  padding: 36px 28px;
+  position: relative;
+  transition: background 0.3s;
+}
+.why-card:hover { background: #222; }
+.why-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 0;
+  background: var(--red);
+  transition: height 0.3s;
+}
+.why-card:hover::before { height: 100%; }
+
+.why-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 6px;
+  background: rgba(232,19,42,0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  font-size: 1.5rem;
+}
+.why-card h3 { color: var(--white); margin-bottom: 10px; font-size: 1rem; }
+.why-card p { font-size: 0.93rem; color: #AAAAAA; max-width: none; }
+
+/* ── SECTION: NEBRASKA STORY ── */
+.nebraska-section {
+  background: var(--black);
+  padding: 100px 0;
+}
+.nebraska-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.nebraska-visual { position: relative; }
+.state-card {
+  background: var(--charcoal);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 8px;
+  padding: 32px;
+}
+.state-card-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.ne-flag {
+  width: 56px;
+  height: 40px;
+  border-radius: 3px;
+  overflow: hidden;
+  flex-shrink: 0;
+  position: relative;
+}
+.ne-flag-inner { width: 100%; height: 100%; background: #006BB6; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
+
+.state-card-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1;
+}
+.state-card-title span { display: block; font-family: 'Barlow Condensed', sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #888; margin-top: 4px; }
+
+.origin-list { list-style: none; }
+.origin-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  font-size: 0.95rem;
+  color: #CCCCCC;
+}
+.origin-list li:last-child { border-bottom: none; }
+.origin-list .icon {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  background: rgba(232,19,42,0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  margin-top: 2px;
+}
+
+.nebraska-content h2 { margin-bottom: 20px; }
+.nebraska-content p { color: #BBBBBB; margin-bottom: 18px; }
+.nebraska-content p:last-of-type { margin-bottom: 28px; }
+
+/* ── SECTION: SERVICES ── */
+.services-section {
+  background: var(--charcoal);
+  padding: 100px 0;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  background: rgba(255,255,255,0.04);
+  margin-top: 48px;
+}
+.service-tile {
+  background: var(--charcoal);
+  padding: 28px 22px;
+  cursor: default;
+  transition: background 0.25s;
+  position: relative;
+  overflow: hidden;
+}
+.service-tile:hover { background: #222; }
+.service-tile::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--corn);
+  transform: scaleX(0);
+  transition: transform 0.3s;
+}
+.service-tile:hover::after { transform: scaleX(1); }
+.service-emoji { font-size: 1.8rem; margin-bottom: 12px; display: block; }
+.service-tile h3 { font-size: 0.9rem; color: var(--white); margin-bottom: 8px; }
+.service-tile p { font-size: 0.85rem; color: #888; max-width: none; }
+
+/* ── SECTION: COMPARISON ── */
+.compare-section { background: var(--black); padding: 100px 0; }
+
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 48px;
+  font-size: 0.95rem;
+}
+.compare-table th {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 16px 20px;
+  text-align: center;
+  background: var(--slate);
+  color: #AAA;
+}
+.compare-table th:first-child { text-align: left; }
+.compare-table th.us-col {
+  background: var(--red);
+  color: var(--white);
+}
+.compare-table td {
+  padding: 14px 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  color: #CCC;
+}
+.compare-table td:first-child { color: var(--white); font-weight: 600; }
+.compare-table td { text-align: center; }
+.compare-table td:first-child { text-align: left; }
+.compare-table tr:hover td { background: rgba(255,255,255,0.02); }
+.check { color: var(--green-go); font-size: 1.1rem; }
+.cross { color: #555; font-size: 1.1rem; }
+.sometimes { color: var(--corn); font-size: 0.8rem; font-style: italic; }
+
+/* ── SECTION: RESULTS VISUAL ── */
+.results-section { background: var(--charcoal); padding: 100px 0; }
+
+.results-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 48px;
+}
+
+.chart-card {
+  background: var(--black);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 8px;
+  padding: 28px;
+}
+.chart-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #777;
+  margin-bottom: 20px;
+}
+.chart-note { font-size: 0.78rem; color: #666; margin-top: 12px; max-width: none; line-height: 1.6; }
+.chart-note em { color: #888; font-style: normal; text-transform: uppercase; letter-spacing: 0.12em; font-family: 'Barlow Condensed', sans-serif; font-size: 0.72rem; }
+
+/* Bar chart CSS */
+.bar-chart { display: flex; gap: 8px; align-items: flex-end; height: 160px; margin-bottom: 12px; }
+.bar-wrap { display: flex; flex-direction: column; align-items: center; flex: 1; gap: 6px; height: 100%; justify-content: flex-end; }
+.bar {
+  width: 100%;
+  border-radius: 3px 3px 0 0;
+  position: relative;
+  transition: opacity 0.2s;
+}
+.bar:hover { opacity: 0.85; }
+.bar-label { font-family: 'Barlow Condensed', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #666; }
+.bar-val { font-family: 'Bebas Neue', sans-serif; font-size: 0.9rem; color: #AAA; }
+
+/* Funnel visual */
+.funnel-visual { padding: 12px 0; }
+.funnel-step {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 14px;
+}
+.funnel-bar-outer {
+  height: 34px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 3px;
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+.funnel-bar-inner {
+  height: 100%;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  padding-left: 12px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--white);
+  white-space: nowrap;
+}
+.funnel-tag {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #666;
+  width: 92px;
+  text-align: right;
+  flex-shrink: 0;
+  line-height: 1.2;
+}
+.funnel-tag.ours { color: var(--corn); }
+
+/* Cost-per-lead bars */
+.cpl-row { margin-bottom: 14px; }
+.cpl-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px; gap: 12px; }
+.cpl-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #999;
+}
+.cpl-val { font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem; }
+.cpl-track { height: 18px; background: rgba(255,255,255,0.05); border-radius: 2px; overflow: hidden; }
+.cpl-fill { height: 100%; }
+
+/* ROI grid */
+.roi-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.roi-cell {
+  background: var(--charcoal);
+  border-radius: 6px;
+  padding: 20px;
+  text-align: center;
+}
+.roi-number {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.8rem;
+  display: block;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.roi-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #666;
+}
+
+/* ── SECTION: AIO ── */
+.aio-section {
+  background: linear-gradient(135deg, #0A0A0A 0%, #1A0A0E 50%, #0A0A0A 100%);
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+.aio-section::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(232,19,42,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.aio-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  position: relative;
+}
+.aio-content h2 { margin-bottom: 20px; }
+.aio-content p { color: #BBBBBB; margin-bottom: 18px; }
+.aio-content p strong { color: var(--corn); }
+
+.aio-visual {
+  background: var(--charcoal);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.aio-demo-label {
+  background: rgba(245,200,0,0.12);
+  border-bottom: 1px solid rgba(245,200,0,0.25);
+  color: var(--corn);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 8px 20px;
+}
+.ai-search-bar {
+  background: var(--slate);
+  padding: 14px 20px;
+  font-family: 'Barlow', sans-serif;
+  font-size: 0.9rem;
+  color: #CCC;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.ai-search-bar-icon { color: #777; font-size: 0.8rem; }
+.ai-answer-box { padding: 20px; }
+.ai-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.ai-label::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--red);
+  box-shadow: 0 0 8px rgba(232,19,42,0.8);
+  animation: pulse 2s infinite;
+}
+@keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+.ai-answer-text { font-size: 0.9rem; color: #CCC; line-height: 1.7; max-width: none; }
+.ai-cite {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  font-size: 0.78rem;
+  color: #666;
+  font-family: 'Barlow Condensed', sans-serif;
+  letter-spacing: 0.05em;
+}
+.ai-cite strong { color: var(--corn); }
+
+.aio-pillars {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 28px;
+}
+.aio-pillar {
+  background: var(--charcoal);
+  border-left: 3px solid var(--red);
+  padding: 14px 16px;
+  border-radius: 0 4px 4px 0;
+}
+.aio-pillar h3 {
+  font-size: 0.85rem;
+  color: var(--corn);
+  margin-bottom: 4px;
+}
+.aio-pillar p { font-size: 0.82rem; color: #888; max-width: none; }
+
+/* ── SECTION: PROCESS ── */
+.process-section { background: var(--charcoal); padding: 100px 0; }
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+  margin-top: 56px;
+  position: relative;
+}
+.process-steps::before {
+  content: '';
+  position: absolute;
+  top: 28px;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--red), var(--corn), var(--red));
+}
+.process-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 16px;
+  position: relative;
+}
+.step-num {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--black);
+  border: 2px solid var(--red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.4rem;
+  color: var(--red);
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+}
+.process-step h3 {
+  font-size: 0.85rem;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+.process-step p { font-size: 0.8rem; color: #777; max-width: none; }
+
+/* ── SECTION: CUSTOMER MATH ── */
+.math-section { background: var(--black); padding: 100px 0; }
+
+.customer-math {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+  margin-top: 48px;
+}
+.math-table { width: 100%; border-collapse: collapse; }
+.math-table th {
+  background: var(--red);
+  color: var(--white);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 12px 16px;
+  text-align: left;
+}
+.math-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  color: #CCC;
+  font-size: 0.9rem;
+}
+.math-table td:last-child { color: var(--corn); font-weight: 700; font-family: 'Barlow Condensed', sans-serif; font-size: 1rem; }
+.math-table tr:last-child td {
+  background: rgba(245,200,0,0.08);
+  color: var(--corn);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.math-callout {
+  background: linear-gradient(135deg, var(--red), #8B0000);
+  border-radius: 8px;
+  padding: 36px 32px;
+  text-align: center;
+}
+.math-callout .big-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 5rem;
+  color: var(--corn);
+  line-height: 1;
+  display: block;
+}
+.math-callout p { color: rgba(255,255,255,0.85); font-size: 1rem; max-width: none; margin-top: 8px; }
+
+.side-panel { background: var(--charcoal); border-radius: 8px; padding: 24px; margin-top: 20px; }
+.side-panel h3 { font-size: 0.85rem; color: #888; margin-bottom: 16px; }
+
+/* ── SECTION: INDUSTRIES ── */
+.industries-section { background: var(--charcoal); padding: 80px 0; }
+.industries-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 40px;
+}
+.industry-chip {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 10px 18px;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 3px;
+  color: #BBBBBB;
+  transition: all 0.2s;
+  cursor: default;
+}
+.industry-chip:hover {
+  border-color: var(--corn);
+  color: var(--corn);
+  background: rgba(245,200,0,0.06);
+}
+
+/* ── SECTION: FAQ ── */
+.faq-section { background: var(--black); padding: 100px 0; }
+.faq-list { margin-top: 48px; max-width: 820px; }
+.faq-item {
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.faq-q {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 22px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  font-family: 'Barlow', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--white);
+  transition: color 0.2s;
+}
+.faq-q:hover { color: var(--corn); }
+.faq-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border: 1.5px solid #444;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: #666;
+  transition: all 0.25s;
+  margin-top: 2px;
+}
+.faq-item.open .faq-icon { border-color: var(--red); color: var(--red); transform: rotate(45deg); }
+.faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s;
+}
+.faq-item.open .faq-a { max-height: 900px; padding-bottom: 20px; }
+.faq-a p { color: #AAAAAA; font-size: 0.97rem; }
+
+/* ── SECTION: SERVICE AREA ── */
+.service-area-section {
+  background: var(--charcoal);
+  padding: 80px 0;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+.service-area-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+.service-area-content h2 { margin-bottom: 16px; }
+.service-area-content p { color: #BBBBBB; margin-bottom: 24px; }
+
+.suburb-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  margin-top: 28px;
+}
+.suburb-col-header {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--red);
+  padding: 10px 14px 6px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.suburb-list { list-style: none; }
+.suburb-list li {
+  font-family: 'Barlow', sans-serif;
+  font-size: 0.9rem;
+  color: #BBBBBB;
+  padding: 7px 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.2s, background 0.2s;
+}
+.suburb-list li:hover { color: var(--corn); background: rgba(245,200,0,0.04); }
+.suburb-list li::before {
+  content: '▸';
+  color: var(--red);
+  font-size: 0.65rem;
+  flex-shrink: 0;
+}
+
+.zip-panel {
+  background: var(--black);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.zip-panel-header {
+  background: var(--slate);
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  gap: 12px;
+}
+.zip-panel-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #AAA;
+}
+.zip-panel-badge {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--corn);
+  background: rgba(245,200,0,0.1);
+  border: 1px solid rgba(245,200,0,0.25);
+  padding: 3px 10px;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+.zip-scroll-box {
+  height: 340px;
+  overflow-y: auto;
+  padding: 12px 0;
+  scrollbar-width: thin;
+  scrollbar-color: var(--red) rgba(255,255,255,0.05);
+}
+.zip-scroll-box::-webkit-scrollbar { width: 5px; }
+.zip-scroll-box::-webkit-scrollbar-track { background: rgba(255,255,255,0.03); }
+.zip-scroll-box::-webkit-scrollbar-thumb { background: var(--red); border-radius: 3px; }
+
+.zip-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  transition: background 0.15s;
+}
+.zip-row:hover { background: rgba(232,19,42,0.06); }
+.zip-code {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.1rem;
+  color: var(--corn);
+  letter-spacing: 0.05em;
+  min-width: 60px;
+}
+.zip-city {
+  font-family: 'Barlow', sans-serif;
+  font-size: 0.88rem;
+  color: #BBBBBB;
+  flex: 1;
+  padding-left: 12px;
+}
+.zip-state {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #555;
+  min-width: 28px;
+  text-align: right;
+}
+.zip-panel-footer {
+  padding: 12px 20px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  font-size: 0.78rem;
+  color: #555;
+  font-family: 'Barlow Condensed', sans-serif;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+/* ── SECTION: BOTTOM CTA + FORM ── */
+.bottom-cta-section {
+  background: linear-gradient(135deg, var(--charcoal) 0%, #1A0000 50%, var(--charcoal) 100%);
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+.bottom-cta-section::before {
+  content: '';
+  position: absolute;
+  top: -100px; right: -100px;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(232,19,42,0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+.bottom-cta-inner {
+  display: grid;
+  grid-template-columns: 1fr 440px;
+  gap: 60px;
+  align-items: start;
+  position: relative;
+}
+.bottom-cta-content h2 { margin-bottom: 20px; }
+.bottom-cta-content p { color: #BBBBBB; margin-bottom: 28px; }
+
+.bottom-form-card {
+  background: var(--white);
+  border-radius: 8px;
+  padding: 36px 30px;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.6);
+  position: relative;
+}
+.bottom-form-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--corn), var(--red));
+  border-radius: 8px 8px 0 0;
+}
+.bottom-form-card h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.8rem;
+  color: var(--black);
+  margin-bottom: 4px;
+}
+.bottom-form-card .form-sub {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.checklist {
+  list-style: none;
+  margin-bottom: 28px;
+}
+.checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 8px 0;
+  font-size: 0.95rem;
+  color: #CCCCCC;
+}
+.checklist li::before {
+  content: '✓';
+  color: var(--green-go);
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* ── FOOTER ── */
+footer {
+  background: #050505;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 60px 0 28px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 48px;
+}
+.footer-brand .logo-text { font-size: 2rem; margin-bottom: 12px; }
+.footer-brand .logo-img { width: min(240px, calc(100vw - 80px)); height: auto; }
+.footer-brand p { font-size: 0.88rem; color: #666; max-width: 36ch; }
+
+.footer-nav-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #555;
+  margin-bottom: 16px;
+}
+.footer-links { list-style: none; }
+.footer-links li { margin-bottom: 10px; }
+.footer-links a { font-size: 0.88rem; color: #777; transition: color 0.2s; }
+.footer-links a:hover { color: var(--corn); }
+
+.footer-network {
+  border-top: 1px solid rgba(255,255,255,0.05);
+  padding-top: 20px;
+  margin-bottom: 20px;
+  font-size: 0.82rem;
+  color: #555;
+  max-width: none;
+  line-height: 1.7;
+}
+.footer-network a { color: #777; }
+.footer-network a:hover { color: var(--corn); }
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.05);
+  padding-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.footer-bottom p { font-size: 0.8rem; color: #444; max-width: none; }
+.footer-bottom a { color: #666; }
+.footer-bottom a:hover { color: var(--corn); }
+
+/* ── THANK YOU MODAL ── */
+.thankyou-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+.thankyou-overlay.active { display: flex; }
+.thankyou-box {
+  background: var(--charcoal);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px;
+  padding: 48px 40px;
+  max-width: 520px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+.thankyou-box::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--red), var(--corn));
+  border-radius: 10px 10px 0 0;
+}
+.thankyou-icon { font-size: 3rem; margin-bottom: 16px; display: block; }
+.thankyou-box h2 { font-size: 2.4rem; color: var(--corn); margin-bottom: 12px; }
+.thankyou-box p { color: #BBBBBB; font-size: 1rem; margin-bottom: 28px; max-width: none; }
+.thankyou-close {
+  background: var(--red);
+  color: var(--white);
+  border: none;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.08em;
+  padding: 14px 36px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.thankyou-close:hover { background: var(--red-dark); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1100px) {
+  .nav { gap: 16px; }
+  .nav a { font-size: 0.8rem; }
+  .phone-link { font-size: 1.1rem; }
+}
+
+@media (max-width: 1024px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero { min-height: auto; padding: 100px 0 60px; }
+  .form-card { max-width: 500px; }
+  .trust-grid { grid-template-columns: repeat(2, 1fr); }
+  .why-grid { grid-template-columns: 1fr 1fr; }
+  .nebraska-inner { grid-template-columns: 1fr; gap: 40px; }
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .aio-inner { grid-template-columns: 1fr; gap: 40px; }
+  .process-steps { grid-template-columns: 1fr 1fr; }
+  .process-steps::before { display: none; }
+  .customer-math { grid-template-columns: 1fr; }
+  .results-grid { grid-template-columns: 1fr; }
+  .bottom-cta-inner { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .service-area-inner { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .hdr-right { display: none; }
+  .burger { display: flex; }
+  .mobile-call-bar { display: flex; }
+  body { padding-bottom: 74px; }
+}
+
+@media (max-width: 640px) {
+  section { padding: 60px 0; }
+  .trust-grid { grid-template-columns: 1fr 1fr; }
+  .why-grid { grid-template-columns: 1fr; }
+  .services-grid { grid-template-columns: 1fr 1fr; }
+  .compare-table { font-size: 0.8rem; }
+  .compare-table th, .compare-table td { padding: 10px 10px; }
+  .aio-pillars { grid-template-columns: 1fr; }
+  .process-steps { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+  .roi-grid { grid-template-columns: 1fr 1fr; }
+  .math-callout .big-num { font-size: 3.5rem; }
+  .suburb-columns { grid-template-columns: 1fr; }
+  .funnel-tag { width: 68px; font-size: 0.6rem; }
+  .zip-panel-header { flex-direction: column; align-items: flex-start; gap: 8px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .ticker-inner { animation: none; }
+  .ai-label::before { animation: none; }
+  *, *::before, *::after { transition-duration: 0.01ms !important; }
+}
+
+/* ── SECTION: OMAHA SEO GUIDE (prose / Q&A) ── */
+.guide-section { background: var(--black); padding: 100px 0; }
+.guide-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 56px;
+  margin-top: 40px;
+}
+.qa-block { padding: 26px 0; border-top: 1px solid rgba(255,255,255,0.07); }
+.qa-block h3 {
+  font-family: 'Barlow', sans-serif;
+  font-size: 1.12rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: none;
+  line-height: 1.35;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+.qa-block p { color: #A8A8A8; font-size: 0.97rem; max-width: none; margin-bottom: 12px; }
+.qa-block p:last-child { margin-bottom: 0; }
+.qa-block p strong { color: var(--corn); }
+
+/* ── SECTION: FIRST STEPS (free value) ── */
+.steps-section { background: var(--charcoal); padding: 100px 0; }
+.step-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  background: rgba(255,255,255,0.04);
+  margin-top: 40px;
+}
+.step-card { background: var(--charcoal); padding: 30px 26px; }
+.step-card .num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.9rem;
+  color: var(--red);
+  line-height: 1;
+  display: block;
+  margin-bottom: 10px;
+}
+.step-card h3 {
+  font-family: 'Barlow', sans-serif;
+  font-size: 1.02rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: none;
+  line-height: 1.35;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+.step-card p { font-size: 0.92rem; color: #999; max-width: none; }
+.steps-outro {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  border-top: 1px solid rgba(255,255,255,0.07);
+  padding-top: 32px;
+}
+.steps-outro p { color: #BBBBBB; flex: 1; min-width: 260px; }
+
+@media (max-width: 1024px) {
+  .guide-grid { grid-template-columns: 1fr; gap: 0; }
+  .step-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+  .step-grid { grid-template-columns: 1fr; }
+}
+
+
+/* ══════════ TOLL-FREE UTILITY BAR (inside sticky header) ══════════ */
+.topbar { background: var(--red); }
+.topbar-inner {
+  max-width: 1200px; margin: 0 auto; padding: 8px 24px;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 14px; flex-wrap: wrap;
+}
+.topbar a.topbar-phone {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 700;
+  font-size: 1.12rem; letter-spacing: 0.06em; text-transform: uppercase;
+  color: #FFFFFF !important; white-space: nowrap;
+}
+.topbar a.topbar-phone:hover { color: var(--corn) !important; }
+.topbar-note {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 0.76rem; font-weight: 700;
+  letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.82);
+}
+@media (max-width: 560px) {
+  .topbar-inner { justify-content: center; padding: 7px 16px; gap: 8px; }
+  .topbar-note { display: none; }
+  .topbar a.topbar-phone { font-size: 1.18rem; }
+}
+
+/* ══════════ WHITE CHROME OVERRIDES ══════════ */
+header {
+  background: #FFFFFF;
+  backdrop-filter: none;
+  border-bottom: 1px solid rgba(0,0,0,0.10);
+  box-shadow: 0 1px 12px rgba(0,0,0,0.06);
+}
+.logo-link { display: block; line-height: 0; flex-shrink: 0; }
+.logo-img {
+  width: min(300px, calc(100vw - 150px));
+  height: auto;
+  display: block;
+}
+header .phone-link { color: var(--black) !important; }
+header .phone-link:hover { color: var(--red) !important; }
+.hdr-right { margin-left: auto; }
+.burger { border: 1px solid rgba(0,0,0,0.18); }
+.burger span { background: var(--black); }
+
+/* Hamburger at every breakpoint */
+.burger { display: flex; }
+
+.drawer { background: rgba(255,255,255,0.99); }
+.drawer a.drawer-link { color: var(--black); border-bottom: 1px solid rgba(0,0,0,0.08); }
+.drawer a.drawer-link:hover { color: var(--red); }
+.drawer-close { border: 1px solid rgba(0,0,0,0.18); color: var(--black); }
+.drawer-eyebrow {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #999;
+  margin: 22px 0 4px;
+}
+
+footer {
+  background: #FFFFFF;
+  border-top: 1px solid rgba(0,0,0,0.10);
+}
+.footer-brand p { color: #5A5A5A; }
+.footer-nav-title { color: #9A9A9A; }
+.footer-links a { color: #444444; }
+.footer-links a:hover { color: var(--red); }
+footer .phone-link { color: var(--black) !important; }
+footer .phone-link:hover { color: var(--red) !important; }
+.footer-network { color: #666666; border-top: 1px solid rgba(0,0,0,0.10); }
+.footer-network a { color: var(--red); }
+.footer-network a:hover { color: var(--black); }
+.footer-bottom { border-top: 1px solid rgba(0,0,0,0.10); }
+.footer-bottom p { color: #888888; }
+.footer-bottom a { color: #555555; }
+.footer-bottom a:hover { color: var(--red); }
+
+/* ══════════ HERO IMAGE LAYER ══════════ */
+.hero-bg-photo {
+  position: absolute;
+  inset: 0;
+  background-image: url('/images/omaha-seo-hero.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.18;
+  pointer-events: none;
+}
+.hero-bg-veil {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(26,26,26,0.94) 0%, rgba(26,26,26,0.80) 45%, rgba(26,26,26,0.55) 100%);
+  pointer-events: none;
+}
+
+/* ══════════ SCROLL REVEAL ══════════ */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1);
+  will-change: opacity, transform;
+}
+.reveal.shown { opacity: 1; transform: none; }
+
+/* ══════════ VISIBILITY SCORECARD TOOL ══════════ */
+.tool-section {
+  background: linear-gradient(160deg, #0A0A0A 0%, #17070A 55%, #0A0A0A 100%);
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+.tool-shell {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 48px;
+  margin-top: 40px;
+  align-items: start;
+  position: relative;
+}
+.tool-questions {
+  background: var(--charcoal);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.tool-q {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 15px 22px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  cursor: pointer;
+  transition: background 0.18s;
+  background: none;
+  border-left: 0; border-right: 0; border-top: 0;
+  width: 100%;
+  text-align: left;
+  font-family: 'Barlow', sans-serif;
+  font-size: 0.95rem;
+  color: #CFCFCF;
+  line-height: 1.45;
+}
+.tool-q:last-of-type { border-bottom: none; }
+.tool-q:hover { background: rgba(255,255,255,0.03); }
+.tool-q .tick {
+  flex-shrink: 0;
+  width: 26px; height: 26px;
+  border: 2px solid #4A4A4A;
+  border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.85rem;
+  color: transparent;
+  transition: all 0.2s;
+}
+.tool-q[aria-pressed="true"] { color: var(--white); }
+.tool-q[aria-pressed="true"] .tick {
+  border-color: var(--green-go);
+  background: var(--green-go);
+  color: var(--black);
+}
+
+.tool-panel {
+  background: var(--charcoal);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px;
+  padding: 28px 24px;
+  text-align: center;
+  position: sticky;
+  top: 110px;
+}
+.ring-wrap { position: relative; width: 176px; height: 176px; margin: 0 auto 12px; }
+.ring-wrap svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+.ring-track { fill: none; stroke: rgba(255,255,255,0.08); stroke-width: 12; }
+.ring-fill {
+  fill: none;
+  stroke: var(--red);
+  stroke-width: 12;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.8s cubic-bezier(0.16,1,0.3,1), stroke 0.4s;
+}
+.ring-num {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Bebas Neue', sans-serif;
+  line-height: 1;
+}
+.ring-num b { font-size: 3.2rem; font-weight: 400; color: var(--white); }
+.ring-num small {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #777;
+  margin-top: 4px;
+}
+.tool-verdict {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.tool-readout { font-size: 0.88rem; color: #999; margin-bottom: 18px; max-width: none; min-height: 66px; }
+.tool-panel .btn { width: 100%; text-align: center; font-size: 0.98rem; padding: 14px 18px; }
+.tool-disclaimer { font-size: 0.74rem; color: #5A5A5A; margin-top: 14px; max-width: none; line-height: 1.55; }
+
+/* ══════════ SBA DATA CHART ══════════ */
+.data-section { background: var(--black); padding: 100px 0; }
+.data-shell {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 56px;
+  margin-top: 40px;
+  align-items: center;
+}
+.hbar-row { margin-bottom: 18px; }
+.hbar-head { display: flex; justify-content: space-between; align-items: baseline; gap: 14px; margin-bottom: 6px; }
+.hbar-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #BBBBBB;
+}
+.hbar-val { font-family: 'Bebas Neue', sans-serif; font-size: 1.25rem; color: var(--corn); }
+.hbar-track { height: 22px; background: rgba(255,255,255,0.05); border-radius: 3px; overflow: hidden; }
+.hbar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--red), rgba(232,19,42,0.45));
+  width: 0;
+  transition: width 1.1s cubic-bezier(0.16,1,0.3,1);
+}
+.shown .hbar-fill { width: var(--w); }
+.source-line {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 22px;
+  line-height: 1.65;
+  max-width: none;
+}
+.source-line a { color: #999; text-decoration: underline; }
+.source-line a:hover { color: var(--corn); }
+
+/* ══════════ WEB DESIGN CROSS-SELL ══════════ */
+.webdesign-section {
+  background: var(--charcoal);
+  padding: 90px 0;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+.wd-shell { display: grid; grid-template-columns: 1fr 340px; gap: 48px; align-items: center; }
+.wd-shell h2 { margin-bottom: 18px; }
+.wd-shell > div > p { color: #BBBBBB; margin-bottom: 16px; }
+.wd-stack { display: grid; gap: 10px; }
+.wd-chip {
+  background: var(--black);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-left: 3px solid var(--corn);
+  border-radius: 0 6px 6px 0;
+  padding: 14px 18px;
+}
+.wd-chip strong {
+  display: block;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--corn);
+  margin-bottom: 3px;
+}
+.wd-chip span { font-size: 0.87rem; color: #999; }
+
+@media (max-width: 1024px) {
+  .tool-shell { grid-template-columns: 1fr; }
+  .tool-panel { position: static; }
+  .data-shell { grid-template-columns: 1fr; gap: 36px; }
+  .wd-shell { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .header-inner { padding: 10px 16px; }
+  .tool-q { font-size: 0.9rem; padding: 14px 16px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; }
+  .hbar-fill { transition: none; }
+  .ring-fill { transition: none; }
+}
+
+/* ══════════════════════════════════════════════════════
+   BLOG ARTICLE TEMPLATE
+   Reading-first: narrow measure, sticky contents,
+   progress bar, callouts. Reused across all posts.
+   ══════════════════════════════════════════════════════ */
+
+:root { --mono: 'IBM Plex Mono', 'Courier New', monospace; }
+
+.breadcrumb-bar { background: var(--charcoal); padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.breadcrumb { list-style: none; display: flex; align-items: center; flex-wrap: wrap; gap: 9px;
+  font-family: 'Barlow Condensed', sans-serif; font-size: 0.78rem; letter-spacing: 0.1em;
+  text-transform: uppercase; color: #777; margin: 0; padding: 0; }
+.breadcrumb li { display: flex; align-items: center; gap: 9px; }
+.breadcrumb li + li::before { content: '\203A'; color: #4A4A4A; font-size: 0.9rem; }
+.breadcrumb a { color: #999; }
+.breadcrumb a:hover { color: var(--corn); }
+.breadcrumb li[aria-current="page"] { color: var(--corn); }
+
+.reveal[style*="--i"] { transition-delay: calc(var(--i) * 55ms); }
+
+/* Reading progress */
+.progress { position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 1200; background: transparent; pointer-events: none; }
+.progress i { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--corn), var(--red)); }
+
+/* ── ARTICLE HEAD ── */
+.art-head { background: var(--charcoal); padding: 62px 0 46px; border-bottom: 1px solid rgba(255,255,255,0.07); position: relative; overflow: hidden; }
+.art-head .hero-bg-grid, .art-head .hero-bg-glow { position: absolute; }
+.art-head-inner { position: relative; max-width: 800px; }
+.art-cat {
+  display: inline-block; font-family: 'Barlow Condensed', sans-serif; font-size: 0.7rem;
+  font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--red); border: 1px solid var(--red); border-radius: 2px; padding: 4px 12px; margin-bottom: 18px;
+}
+.art-h1 { font-size: clamp(2.2rem, 5.6vw, 4rem); color: var(--white); margin-bottom: 18px; line-height: 1.02; }
+.art-dek { font-size: 1.14rem; color: #A8A8A8; font-weight: 300; max-width: 62ch; margin-bottom: 22px; }
+.art-meta { display: flex; align-items: center; gap: 18px; flex-wrap: wrap;
+  font-family: var(--mono); font-size: 0.76rem; letter-spacing: 0.05em; color: #6E6E6E;
+  border-top: 1px solid rgba(255,255,255,0.08); padding-top: 18px; }
+.art-meta span { display: flex; align-items: center; gap: 7px; }
+.art-meta .dot { width: 4px; height: 4px; border-radius: 50%; background: #4A4A4A; }
+
+/* ── ARTICLE LAYOUT ── */
+.art-wrap { background: var(--black); padding: 60px 0 90px; }
+.art-grid { display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: 56px; align-items: start; }
+
+.toc { position: sticky; top: 150px; }
+.toc h2 { font-family: 'Barlow Condensed', sans-serif; font-size: 0.7rem; font-weight: 700;
+  letter-spacing: 0.2em; text-transform: uppercase; color: #6E6E6E; margin-bottom: 14px; }
+.toc ol { list-style: none; counter-reset: toc; }
+.toc li { counter-increment: toc; border-left: 2px solid rgba(255,255,255,0.09); }
+.toc a { display: block; padding: 8px 0 8px 14px; font-size: 0.86rem; color: #8A8A8A; line-height: 1.4; }
+.toc a::before { content: counter(toc, decimal-leading-zero) '  '; font-family: var(--mono); font-size: 0.72rem; color: #4E4E4E; }
+.toc a:hover { color: var(--corn); }
+.toc li.here { border-left-color: var(--red); }
+.toc li.here a { color: var(--white); }
+
+/* Prose */
+.prose { max-width: 68ch; }
+.prose > h2 {
+  font-family: 'Bebas Neue', sans-serif; font-size: clamp(1.7rem, 3.4vw, 2.5rem);
+  color: var(--white); letter-spacing: 0.03em; margin: 52px 0 16px; scroll-margin-top: 160px;
+}
+.prose > h2:first-child { margin-top: 0; }
+.prose h3 {
+  font-family: 'Barlow', sans-serif; font-size: 1.14rem; font-weight: 700; letter-spacing: 0;
+  text-transform: none; color: var(--white); margin: 30px 0 10px; line-height: 1.35;
+}
+.prose p { font-size: 1.04rem; color: #B4B4B4; margin-bottom: 17px; max-width: none; line-height: 1.75; }
+.prose p strong { color: var(--white); }
+.prose a { color: var(--corn); text-decoration: underline; text-underline-offset: 3px; }
+.prose a:hover { color: var(--red); }
+.prose ul, .prose ol { margin: 0 0 20px 0; list-style: none; }
+.prose li { font-size: 1.01rem; color: #B0B0B0; padding: 8px 0 8px 24px; position: relative; line-height: 1.65; }
+.prose ul li::before { content: '\2014'; position: absolute; left: 0; color: var(--red); }
+.prose ol { counter-reset: pl; }
+.prose ol li { counter-increment: pl; }
+.prose ol li::before { content: counter(pl) '.'; position: absolute; left: 0; font-family: var(--mono); font-size: 0.86rem; color: var(--corn); }
+
+/* Callouts */
+.callout { border-left: 3px solid var(--corn); background: rgba(245,200,0,0.055); border-radius: 0 8px 8px 0; padding: 20px 24px; margin: 30px 0; }
+.callout b { display: block; font-family: 'Barlow Condensed', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--corn); margin-bottom: 9px; }
+.callout p { color: #CACACA; margin-bottom: 0; font-size: 0.99rem; }
+.callout p + p { margin-top: 12px; }
+.callout--warn { border-left-color: var(--red); background: rgba(232,19,42,0.06); }
+.callout--warn b { color: var(--red); }
+
+.srcnote { font-size: 0.82rem; color: #6E6E6E; line-height: 1.6; margin: 18px 0 0; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.07); }
+.srcnote a { color: #8A8A8A; }
+
+/* Figures inside prose */
+.figure-block { margin: 34px 0; }
+.figure-shell { background: var(--charcoal); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 24px 22px 16px; overflow: hidden; }
+.figure-shell svg { width: 100%; height: auto; display: block; }
+.figure-cap { font-size: 0.81rem; color: #777; margin-top: 14px; line-height: 1.6; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 13px; }
+.figure-cap strong { color: #AAA; }
+.svg-lbl { font-family: 'Barlow Condensed', sans-serif; font-size: 10.5px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; }
+.svg-txt { font-family: 'Barlow', sans-serif; font-size: 11.5px; }
+.svg-mono { font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; font-weight: 500; }
+
+/* ── DROP DATE DIAGNOSTIC ── */
+.diag { background: var(--charcoal); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; overflow: hidden; margin: 36px 0; }
+.diag-top { background: var(--slate); padding: 16px 22px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+.diag-top b { font-family: 'Barlow Condensed', sans-serif; font-size: 0.74rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--corn); display: block; margin-bottom: 4px; }
+.diag-top span { font-size: 0.85rem; color: #9C9C9C; }
+.diag-body { padding: 24px 22px; }
+.diag-body label { display: block; font-family: 'Barlow Condensed', sans-serif; font-size: 0.74rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: #8E8E8E; margin-bottom: 9px; }
+.diag-body input[type=date] {
+  width: 100%; padding: 13px 14px; border: 1.5px solid rgba(255,255,255,0.14); border-radius: 6px;
+  background: var(--black); color: #FFF; font-family: var(--mono); font-size: 0.98rem;
+  -webkit-appearance: none; color-scheme: dark;
+}
+.diag-body input[type=date]:focus { outline: none; border-color: var(--corn); }
+.diag-out { margin-top: 20px; padding: 20px 22px; border-radius: 8px; border-left: 3px solid #4A4A4A; background: var(--black); }
+.diag-out .dv {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 0.72rem; font-weight: 700;
+  letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 10px; display: block; color: #8A8A8A;
+}
+.diag-out h4 { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; letter-spacing: 0.03em; color: var(--white); text-transform: none; margin-bottom: 10px; }
+.diag-out p { font-size: 0.95rem; color: #A8A8A8; margin-bottom: 0; line-height: 1.65; }
+.diag-out p + p { margin-top: 11px; }
+.diag-out.hit { border-left-color: var(--red); }
+.diag-out.hit .dv { color: var(--red); }
+.diag-out.glitch { border-left-color: var(--corn); }
+.diag-out.glitch .dv { color: var(--corn); }
+.diag-out.clear { border-left-color: var(--green-go); }
+.diag-out.clear .dv { color: var(--green-go); }
+
+/* Update timeline table */
+.upd { width: 100%; border-collapse: collapse; margin-top: 8px; }
+.upd th { font-family: 'Barlow Condensed', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #6E6E6E; text-align: left; padding: 0 14px 9px 0; border-bottom: 1px solid rgba(255,255,255,0.12); }
+.upd td { padding: 11px 14px 11px 0; border-bottom: 1px solid rgba(255,255,255,0.055); font-size: 0.9rem; color: #A8A8A8; }
+.upd td:first-child { color: var(--white); font-weight: 600; }
+.upd td.num { font-family: var(--mono); font-size: 0.84rem; color: var(--corn); white-space: nowrap; }
+
+/* End CTA */
+.art-cta { background: var(--charcoal); border: 1px solid rgba(255,255,255,0.09); border-radius: 12px; padding: 32px 30px; margin-top: 46px; }
+.art-cta h2 { font-family: 'Bebas Neue', sans-serif; font-size: 1.9rem; color: var(--corn); letter-spacing: 0.03em; margin: 0 0 12px; }
+.art-cta p { color: #B0B0B0; margin-bottom: 16px; }
+.art-cta .btn { margin-right: 10px; margin-top: 6px; }
+
+@media (max-width: 980px) {
+  .art-grid { grid-template-columns: 1fr; gap: 0; }
+  .toc { position: static; margin-bottom: 34px; padding-bottom: 26px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .toc ol { display: grid; grid-template-columns: 1fr 1fr; gap: 0 18px; }
+}
+@media (max-width: 640px) {
+  .toc ol { grid-template-columns: 1fr; }
+  .art-wrap { padding: 44px 0 70px; }
+  .prose p { font-size: 1rem; }
+  .upd td, .upd th { font-size: 0.82rem; padding-right: 8px; }
+}
+</style></head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<!-- HEADER -->
+<header>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <a href="tel:18004818638" class="topbar-phone">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.27 9.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.85a16 16 0 006.24 6.24l1.22-1.22a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"></path></svg>
+        Call Toll Free: 1-800-481-8638
+      </a>
+      <span class="topbar-note">Mon–Fri 8am–6pm CT · Free Audit, No Obligation</span>
+    </div>
+  </div>
+  <div class="header-inner">
+    <a href="/" class="logo-link" aria-label="Omaha SEO Pros home">
+      <img src="/images/omaha-seo-logo.png" alt="Omaha SEO Pros" class="logo-img" width="300">
+    </a>
+
+
+    <div class="hdr-right">
+      <a href="tel:18004818638" class="phone-link">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.27 9.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.85a16 16 0 006.24 6.24l1.22-1.22a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"></path></svg>
+        1-800-481-8638
+      </a>
+      <a href="/#get-started" class="btn btn--red">Free Strategy Session</a>
+    </div>
+
+    <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="drawer" onclick="toggleDrawer()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- MOBILE DRAWER -->
+<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Site menu">
+  <button class="drawer-close" type="button" aria-label="Close menu" onclick="toggleDrawer()">✕</button>
+  <div class="drawer-inner">
+    <p class="drawer-eyebrow">Services</p>
+    <a class="drawer-link" href="/local-seo-omaha/">Local SEO Omaha</a>
+    <a class="drawer-link" href="/ai-search-optimization-omaha/">AI Search Optimization</a>
+    <a class="drawer-link" href="/omaha-web-designer/">Omaha Web Design</a>
+    <a class="drawer-link" href="/omaha-seo-pricing/">Pricing</a>
+    <p class="drawer-eyebrow">Resources</p>
+    <a class="drawer-link" href="/how-to-choose-an-seo-company-in-omaha/">Choosing an SEO Company</a>
+    <a class="drawer-link" href="/blog/">Blog</a>
+    <a class="drawer-link" href="/#scorecard" onclick="closeDrawer()">Free Visibility Scorecard</a>
+    <p class="drawer-eyebrow">Company</p>
+    <a class="drawer-link" href="/free-seo-audit-omaha/">Free SEO Audit</a>
+    <a class="drawer-link" href="/contact/">Contact</a>
+    <div class="drawer-actions">
+      <a href="tel:18004818638" class="btn btn--corn">Call 1-800-481-8638</a>
+      <a href="/#get-started" class="btn btn--red" onclick="closeDrawer()">Free Strategy Session</a>
+    </div>
+  </div>
+</div>
+
+<main id="main">
+
+<div class="progress" aria-hidden="true"><i id="progBar"></i></div>
+
+<!-- BREADCRUMB -->
+<nav class="breadcrumb-bar" aria-label="Breadcrumb">
+  <div class="container">
+    <ol class="breadcrumb">
+      <li><a href="/">Home</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li aria-current="page">Why Did My Rankings Drop?</li>
+    </ol>
+  </div>
+</nav>
+
+<!-- ARTICLE HEAD -->
+<header class="art-head">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-bg-glow"></div>
+  <div class="container">
+    <div class="art-head-inner">
+      <span class="art-cat">Strategy</span>
+      <h1 class="art-h1">Why Did My Google Rankings Drop?</h1>
+      <p class="art-dek">Four possible causes, in the order worth checking them. Start with the date — it tells you more than anything else you could look at.</p>
+      <div class="art-meta">
+        <span><time datetime="2026-08-21">21 August 2026</time></span>
+        <span class="dot" aria-hidden="true"></span>
+        <span>14 min read</span>
+        <span class="dot" aria-hidden="true"></span>
+        <span>Includes a free date checker</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ARTICLE -->
+<div class="art-wrap">
+  <div class="container">
+    <div class="art-grid">
+
+      <nav class="toc" aria-label="Contents">
+        <h2>Contents</h2>
+        <ol>
+          <li><a href="#real">Is it actually a drop?</a></li>
+          <li><a href="#checker">Check your drop date</a></li>
+          <li><a href="#updates">Confirmed update timeline</a></li>
+          <li><a href="#which">Which pages lost?</a></li>
+          <li><a href="#you">Things you changed</a></li>
+          <li><a href="#them">Things you didn't</a></li>
+          <li><a href="#order">What to do, in order</a></li>
+          <li><a href="#dont">What not to do</a></li>
+          <li><a href="#faq">Questions</a></li>
+        </ol>
+      </nav>
+
+      <article class="prose">
+
+        <div class="answer-block">
+          <p>Work through four possibilities in order. Is the drop real, or a reporting artifact? Does the date line up with a confirmed Google update? Did something change on your site? Did something change on someone else's?</p>
+          <p>The date is the most useful piece of information you have. Almost everything below sorts itself once you know it.</p>
+        </div>
+
+        <h2 id="real">First: Is It Actually A Drop?</h2>
+
+        <p>Start here, because a surprising number of panics turn out to be measurement problems. Three known ones have hit in the past two years, and each made healthy sites look damaged.</p>
+
+        <h3>Your rank tracker lost visibility, not your site</h3>
+        <p>Google removed the <code>&amp;num=100</code> search parameter. Rank-tracking tools had used it to pull a hundred results in a single request, which is how they reported positions beyond the top ten cheaply.</p>
+        <p>When it disappeared, tools across the industry started showing keyword losses. Ahrefs documented the impact publicly. <strong>Those losses were a measurement change, not a ranking change.</strong> If your drop appears in a third-party tool but not in Search Console, this is the first thing to rule out.</p>
+
+        <h3>The 15 September 2025 Search Console glitch</h3>
+        <p>A dramatic drop dated specifically to 15 September 2025 was a confirmed Search Console reporting glitch. Not an algorithm event. If your chart has a cliff on that exact date, you are looking at a bug that has since been documented.</p>
+
+        <h3>The impression logging error</h3>
+        <p>This one is subtler and still affects how you read old data. Google confirmed a logging error affecting Search Console impression data from around May 2025, with a fix that only began rolling out in early April 2026.</p>
+        <p>The practical consequence: impressions, click-through rate and average position from before late April 2026 may be an inflated baseline. Clicks were not affected. So if you are comparing this month against last spring and the impressions look catastrophic, check the clicks line before you conclude anything.</p>
+
+        <div class="callout">
+          <b>The quickest sanity check</b>
+          <p>Open Search Console, look at clicks only, and set the range to 16 months. If clicks are steady and only impressions fell, you probably have a reporting artifact rather than a ranking problem.</p>
+          <p>If clicks fell too, keep reading.</p>
+        </div>
+
+        <h2 id="checker">Second: Check The Date</h2>
+
+        <p>Once you know the drop is real, the date does most of the diagnostic work. A drop that starts inside a confirmed Google rollout has a different explanation — and a different response — than one that starts on a random Tuesday.</p>
+        <p>Put the approximate date below. It checks against Google's confirmed update history and the known reporting artifacts.</p>
+
+        <div class="diag">
+          <div class="diag-top">
+            <b>Free Tool · Drop Date Checker</b>
+            <span>Runs in your browser. Nothing is sent anywhere.</span>
+          </div>
+          <div class="diag-body">
+            <label for="dropDate">Roughly when did the drop start?</label>
+            <input type="date" id="dropDate" min="2024-01-01" max="2026-12-31" value="2026-05-25">
+            <div class="diag-out" id="diagOut" aria-live="polite">
+              <span class="dv">Result</span>
+              <h4>Pick a date</h4>
+              <p>Use the day the decline began, not the day you noticed it. Those are often two or three weeks apart.</p>
+            </div>
+          </div>
+        </div>
+
+        <h2 id="updates">Google's Confirmed Update Timeline</h2>
+
+        <p>These dates come from Google's Search Status Dashboard. They are the only update dates worth trusting — everything else is inference from volatility trackers.</p>
+
+        <table class="upd">
+          <caption class="sr-only">Confirmed Google ranking updates and their rollout windows</caption>
+          <thead>
+            <tr><th scope="col">Update</th><th scope="col">Window</th><th scope="col">Length</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>May 2026 core update</td><td>21 May – 2 June 2026</td><td class="num">~12 days</td></tr>
+            <tr><td>March 2026 core update</td><td>27 March – 8 April 2026</td><td class="num">12 days</td></tr>
+            <tr><td>March 2026 spam update</td><td>24 – 25 March 2026</td><td class="num">&lt;20 hrs</td></tr>
+            <tr><td>February 2026 Discover core update</td><td>5 – 27 February 2026</td><td class="num">22 days</td></tr>
+            <tr><td>December 2025 core update</td><td>11 – 29 December 2025</td><td class="num">18 days</td></tr>
+            <tr><td>June 2025 core update</td><td>30 June – 17 July 2025</td><td class="num">~17 days</td></tr>
+            <tr><td>March 2025 core update</td><td>13 – 27 March 2025</td><td class="num">~14 days</td></tr>
+            <tr><td>December 2024 core update</td><td>12 – 18 December 2024</td><td class="num">~6 days</td></tr>
+            <tr><td>November 2024 core update</td><td>11 Nov – 5 December 2024</td><td class="num">~24 days</td></tr>
+            <tr><td>August 2024 core update</td><td>15 Aug – 3 September 2024</td><td class="num">~19 days</td></tr>
+            <tr><td>March 2024 core update</td><td>March – May 2024</td><td class="num">45 days</td></tr>
+          </tbody>
+        </table>
+
+        <p class="srcnote">Source: Google Search Status Dashboard, as reported by Search Engine Land, Search Engine Journal, Search Engine Roundtable and Ahrefs. Retrieved August 2026.</p>
+
+        <div class="figure-block">
+          <div class="figure-shell">
+            <svg viewBox="0 0 660 250" role="img" aria-labelledby="ft fd" xmlns="http://www.w3.org/2000/svg">
+              <title id="ft">Google core update cadence, 2024 to 2026</title>
+              <desc id="fd">A timeline showing confirmed Google core updates from August 2024 through May 2026, illustrating that the gaps between updates have tightened from several months to roughly six weeks.</desc>
+              <line x1="20" y1="120" x2="640" y2="120" stroke="#2E2E2E" stroke-width="1.5"/>
+              <g>
+                <rect x="30" y="106" width="46" height="28" rx="4" fill="rgba(232,19,42,0.5)"/>
+                <text x="53" y="150" class="svg-mono" fill="#8A8A8A" text-anchor="middle">Aug 24</text>
+                <rect x="96" y="106" width="58" height="28" rx="4" fill="rgba(232,19,42,0.5)"/>
+                <text x="125" y="150" class="svg-mono" fill="#8A8A8A" text-anchor="middle">Nov 24</text>
+                <rect x="176" y="106" width="18" height="28" rx="4" fill="rgba(232,19,42,0.5)"/>
+                <text x="185" y="150" class="svg-mono" fill="#8A8A8A" text-anchor="middle">Dec 24</text>
+                <rect x="248" y="106" width="36" height="28" rx="4" fill="rgba(232,19,42,0.6)"/>
+                <text x="266" y="150" class="svg-mono" fill="#8A8A8A" text-anchor="middle">Mar 25</text>
+                <rect x="330" y="106" width="42" height="28" rx="4" fill="rgba(232,19,42,0.6)"/>
+                <text x="351" y="150" class="svg-mono" fill="#8A8A8A" text-anchor="middle">Jun 25</text>
+                <rect x="426" y="106" width="44" height="28" rx="4" fill="rgba(232,19,42,0.6)"/>
+                <text x="448" y="150" class="svg-mono" fill="#8A8A8A" text-anchor="middle">Dec 25</text>
+                <rect x="516" y="106" width="32" height="28" rx="4" fill="rgba(245,200,0,0.75)"/>
+                <text x="532" y="150" class="svg-mono" fill="#8A8A8A" text-anchor="middle">Mar 26</text>
+                <rect x="572" y="106" width="32" height="28" rx="4" fill="rgba(245,200,0,0.75)"/>
+                <text x="588" y="150" class="svg-mono" fill="#8A8A8A" text-anchor="middle">May 26</text>
+              </g>
+              <path d="M548 96 L548 78 L572 78 L572 96" stroke="#F5C800" stroke-width="1.4" fill="none"/>
+              <text x="560" y="70" class="svg-lbl" fill="#F5C800" text-anchor="middle">~6 weeks apart</text>
+              <text x="20" y="30" class="svg-lbl" fill="#DDDDDD">Confirmed core updates — bar width is rollout length</text>
+              <text x="20" y="48" class="svg-txt" fill="#8A8A8A">The gaps are closing. Two core updates landed inside ten weeks in 2026.</text>
+              <text x="20" y="196" class="svg-txt" fill="#7A7A7A">Rollouts run one to three weeks. During that window rankings move unpredictably,</text>
+              <text x="20" y="214" class="svg-txt" fill="#7A7A7A">because different ranking systems update at different times rather than all at once.</text>
+              <text x="20" y="238" class="svg-mono" fill="#5F5F5F">Source: Google Search Status Dashboard</text>
+            </svg>
+          </div>
+          <p class="figure-cap"><strong>The cadence tightened.</strong> Core updates used to arrive twice a year. In 2026 two landed roughly six weeks apart. If you have not looked at your Search Console data in a quarter, you have probably lived through one without noticing.</p>
+        </div>
+
+        <div class="callout callout--warn">
+          <b>Google's own position on core updates</b>
+          <p>Google states that ranking drops do not necessarily mean something is wrong with your site, that core updates are broad and do not target specific sites or pages, and that recovery often comes with a later core update rather than an immediate fix.</p>
+          <p>It also recommends waiting at least one full week after a rollout completes before analysing your data. Mid-rollout numbers are noise.</p>
+        </div>
+
+        <h2 id="which">Which Pages Actually Lost?</h2>
+
+        <p>This step decides everything after it, and most people skip it. A drop spread across every page means something site-wide or an update. A drop on four pages means those four pages.</p>
+
+        <p>Here is how to see it in Search Console, which is free and which you already have if anyone set it up.</p>
+
+        <ol>
+          <li>Open the <strong>Performance</strong> report and switch to the <strong>Pages</strong> tab.</li>
+          <li>Set the date range to <strong>Compare</strong>, and pick the four weeks before your drop date against the four weeks after.</li>
+          <li>Sort by the clicks difference column, smallest first. Your biggest losers are now at the top.</li>
+        </ol>
+
+        <p>Then read the shape of it. If a handful of pages lost almost everything and the rest are flat, the cause is on those pages — content edits, lost redirects, or a competitor beating you on those specific queries.</p>
+
+        <p>If everything dropped by a similar percentage, no individual page is at fault. That pattern points at a core update, a technical problem affecting the whole site, or seasonality.</p>
+
+        <p>And if a few pages dropped while others <em>gained</em>, that is the classic core update signature. Google reassessed the results and you moved in both directions.</p>
+
+        <div class="callout">
+          <b>The pattern most people misread</b>
+          <p>Impressions steady, average position steady, clicks down. That is not a ranking drop at all — you still rank where you did, and fewer people are clicking.</p>
+          <p>Usually that means something new appeared above you on the results page. An AI Overview, a new ad block, a shopping carousel. The fix is a different problem from the one you thought you had.</p>
+        </div>
+
+        <h2 id="you">Third: Things You Changed</h2>
+
+        <p>If the date does not match an update, look inward. These are the self-inflicted causes we see most often, roughly in order of frequency.</p>
+
+        <h3>You rewrote a title or an H1</h3>
+        <p>The most common one, and the most reversible. Changing a heading changes how Google understands what a page is about. A page that was a strong match for a phrase can quietly stop being one.</p>
+        <p>We have watched a single headline edit cost a page-one position. If your drop began within a week or two of a content change, <strong>restore the previous version first</strong> and see whether positions return before you investigate anything else. That is the cheapest test available.</p>
+
+        <h3>You redesigned the site and lost the redirects</h3>
+        <p>The most expensive one. If a new site changed URLs without mapping every old address to its new equivalent, the rankings those pages held do not transfer. They just stop.</p>
+        <p>Check Search Console for a spike in 404s. Crawl your old sitemap and find every URL now returning an error. Then map each one to its closest replacement. Traffic built over three years can vanish in a weekend this way, and it usually takes months to fully recover.</p>
+
+        <h3>A staging tag survived the launch</h3>
+        <p>A <code>noindex</code> meta tag or a development <code>robots.txt</code> carried over to production will remove pages from Google entirely. It looks like a catastrophic ranking collapse and it is a two-minute fix once you spot it.</p>
+        <p>Search Console's Pages report will tell you: look for pages excluded by "noindex" or "blocked by robots.txt" that should not be.</p>
+
+        <h3>You consolidated or deleted pages</h3>
+        <p>Merging thin pages is often good advice. It also removes URLs that were ranking for something, and if those redirects were not set, that traffic goes with them. Any consolidation should be paired with a redirect map, not just a delete.</p>
+
+        <h3>You changed platform or host</h3>
+        <p>Migrations break things quietly. Slower response times, changed URL structures, dropped schema, missing canonical tags, an accidentally blocked crawler. If the drop coincides with a platform move, start there rather than with content.</p>
+
+        <h2 id="them">Fourth: Things You Didn't Change</h2>
+
+        <p>Rankings are relative. You can stand perfectly still and fall, because position is a comparison rather than a score.</p>
+
+        <h3>A competitor got better</h3>
+        <p>Someone published a more complete page, earned links, or finally built the service page you have been meaning to write. Nothing about your site changed. You just got outperformed on that specific query.</p>
+        <p>Search your term and look at what is above you now that was not before. This is usually visible in about ninety seconds.</p>
+
+        <h3>An AI Overview appeared</h3>
+        <p>If an AI-generated answer now sits above the results for your query, clicks fall even when position holds. Watch for the signature: <strong>impressions steady, average position steady, clicks down.</strong> That pattern is not a ranking problem, and no amount of on-page work will fix it directly.</p>
+        <p>What helps is being one of the sources such answers draw from, which is a different discipline. We cover it in <a href="/ai-search-optimization-omaha/">AI search optimisation</a>.</p>
+
+        <h3>Your business information drifted</h3>
+        <p>For local businesses especially. A phone number changed on one directory, an old address resurfaced, a listing you forgot about contradicts your site. Google's confidence in the business erodes and map pack positions soften. This is slow, quiet, and very fixable — see <a href="/local-seo-omaha/">local SEO</a>.</p>
+
+        <h3>It is seasonal</h3>
+        <p>Check the same period last year before diagnosing anything. Roofing enquiries fall in February. Tax services fall in May. A drop that repeats annually is a calendar, not an algorithm.</p>
+
+        <h3>The whole channel dropped, not just Google</h3>
+        <p>Here is a check most recovery guides skip. If email engagement, social traffic and direct visits all fell at the same time, the algorithm is probably not your problem. Something happened to demand, or to your business, and search is just where you noticed it first.</p>
+
+        <h2 id="order">What To Do, In Order</h2>
+
+        <ol>
+          <li><strong>Confirm it is real.</strong> Clicks in Search Console, 16-month view. Rule out the three reporting artifacts above.</li>
+          <li><strong>Date it precisely.</strong> The day the decline began, not the day you noticed. Use the checker above.</li>
+          <li><strong>Check the dashboard.</strong> Was a confirmed update rolling out? If yes, wait for it to finish plus one week before doing anything.</li>
+          <li><strong>List your own changes.</strong> Every edit, launch, migration and deletion within three weeks either side of the date.</li>
+          <li><strong>Identify the affected pages.</strong> Sort Search Console by biggest losers. A few pages points at content. Most pages points at the site or an update.</li>
+          <li><strong>Check the technical basics.</strong> Indexation, robots.txt, noindex tags, 404 spikes, redirect chains, page speed.</li>
+          <li><strong>Look at who replaced you.</strong> Search the term. See what is there now. Note what they have that you do not.</li>
+          <li><strong>Fix the highest-confidence cause first.</strong> One thing at a time, so you can tell what worked.</li>
+        </ol>
+
+        <div class="callout">
+          <b>The single most useful habit</b>
+          <p>Keep a change log. A dated note every time anyone edits content, launches a page, changes a plugin or touches the theme.</p>
+          <p>It costs nothing and it turns "we have no idea what happened in April" into a five-minute diagnosis. Almost nobody does this, and everybody who has ever needed it wishes they had.</p>
+        </div>
+
+        <h2 id="dont">What Not To Do</h2>
+
+        <p><strong>Do not make changes during a rollout.</strong> Rankings move unpredictably mid-update because different systems update at different times. Week-one movement frequently reverses before completion. Changes made now also make it impossible to tell later whether a recovery came from your fix or the update settling.</p>
+
+        <p><strong>Do not delete pages in a panic.</strong> Deleting content because it lost rankings removes any chance of it recovering, and Google's guidance on core updates points toward improving quality rather than culling.</p>
+
+        <p><strong>Do not buy links to fix it.</strong> Whatever the cause, this is not the answer, and it adds a second problem to the one you already have.</p>
+
+        <p><strong>Do not change five things at once.</strong> You will recover — maybe — and have no idea why, which means you cannot repeat it or avoid the cause next time.</p>
+
+        <p><strong>Do not assume a penalty.</strong> Manual actions appear in Search Console under Security &amp; Manual Actions. If there is nothing there, you do not have one. Core update movement is not a penalty, and Google is explicit that it is not a judgement that you did something wrong.</p>
+
+        <h2 id="faq">Questions People Ask</h2>
+
+        <div class="faq-list" style="margin-top:22px;">
+          <div class="faq-item">
+            <button class="faq-q" type="button" id="faq-q1" aria-expanded="false" aria-controls="faq-a1" onclick="toggleFaq(this)">Why did my Google rankings drop suddenly?<span class="faq-icon" aria-hidden="true">+</span></button>
+            <div class="faq-a" id="faq-a1" role="region" aria-labelledby="faq-q1"><p>Work through four possibilities in order. First, check whether the drop is real — Google has had several confirmed reporting problems that made healthy sites look damaged. Second, check the date against Google's confirmed update timeline, because a drop that starts inside a core update rollout usually has a different explanation than one that starts on a random Tuesday. Third, look at what changed on your own site around that date. Fourth, look at what competitors changed. Most drops resolve to one of those four, and the date is what tells you which.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" type="button" id="faq-q2" aria-expanded="false" aria-controls="faq-a2" onclick="toggleFaq(this)">How do I know if a Google core update caused my drop?<span class="faq-icon" aria-hidden="true">+</span></button>
+            <div class="faq-a" id="faq-a2" role="region" aria-labelledby="faq-q2"><p>Compare your drop date against the Google Search Status Dashboard. If it began during a confirmed rollout window and affected many pages at once rather than a few, a core update is the likely cause. If it began on a date with no confirmed update and affected a small number of pages, something on your own site is the more likely explanation. Google recommends waiting at least a full week after a rollout completes before analysing Search Console data, because rankings move unpredictably mid-rollout.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" type="button" id="faq-q3" aria-expanded="false" aria-controls="faq-a3" onclick="toggleFaq(this)">My rankings dropped but I did not change anything. What happened?<span class="faq-icon" aria-hidden="true">+</span></button>
+            <div class="faq-a" id="faq-a3" role="region" aria-labelledby="faq-q3"><p>Something changed, just not on your site. A competitor published better content or earned links. Google reassessed the results in a core update. Your business information drifted out of sync across directories. An AI Overview appeared above the results and absorbed clicks that used to reach you. Or the drop is seasonal and the same thing happened last year. Google's own guidance on core updates states that a ranking drop does not necessarily mean something is wrong with your site.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" type="button" id="faq-q4" aria-expanded="false" aria-controls="faq-a4" onclick="toggleFaq(this)">Did my rankings actually drop, or is it a reporting problem?<span class="faq-icon" aria-hidden="true">+</span></button>
+            <div class="faq-a" id="faq-a4" role="region" aria-labelledby="faq-q4"><p>Check three known artifacts before diagnosing anything. Google removed the &amp;num=100 search parameter that rank-tracking tools relied on, which made many tools report keyword losses that were measurement changes rather than ranking changes. A dramatic drop dated 15 September 2025 was a confirmed Search Console reporting glitch. And Google confirmed an impression logging error affecting Search Console data from around May 2025 until a fix began rolling out in early April 2026, meaning impressions, click-through rate and average position before late April 2026 may be an inflated baseline. Clicks were not affected by that one.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" type="button" id="faq-q5" aria-expanded="false" aria-controls="faq-a5" onclick="toggleFaq(this)">How long does it take to recover from a Google core update?<span class="faq-icon" aria-hidden="true">+</span></button>
+            <div class="faq-a" id="faq-a5" role="region" aria-labelledby="faq-q5"><p>Google's stated position is that recovery often comes with a later core update rather than an immediate fix, because the systems need to see sustained improvement before reassessing. Core updates currently arrive roughly every three months, so a realistic recovery window is one to two update cycles, assuming the underlying quality issue is genuinely addressed. Making frantic changes during a rollout is the most common mistake, and it makes the eventual diagnosis harder.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" type="button" id="faq-q6" aria-expanded="false" aria-controls="faq-a6" onclick="toggleFaq(this)">Can changing my page title or H1 cause a ranking drop?<span class="faq-icon" aria-hidden="true">+</span></button>
+            <div class="faq-a" id="faq-a6" role="region" aria-labelledby="faq-q6"><p>Yes, and it is one of the most common self-inflicted causes. A title or H1 rewrite changes how Google understands what the page is about, and a page that was a strong match for a phrase can stop being one. If your drop began within a week or two of a content edit, restore the previous version first and see whether positions return before investigating anything else.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" type="button" id="faq-q7" aria-expanded="false" aria-controls="faq-a7" onclick="toggleFaq(this)">Why did my traffic drop after a website redesign?<span class="faq-icon" aria-hidden="true">+</span></button>
+            <div class="faq-a" id="faq-a7" role="region" aria-labelledby="faq-q7"><p>Almost always redirects. If the new site changed URLs without mapping every old address to its new equivalent, the rankings those pages held do not transfer. Check Search Console for a spike in 404 errors and crawl the old sitemap to find URLs that now return errors. Other common causes are a staging noindex tag left in place at launch, a robots.txt file carried over from the development environment, and content that was shortened during the redesign.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" type="button" id="faq-q8" aria-expanded="false" aria-controls="faq-a8" onclick="toggleFaq(this)">Should I make changes while a core update is still rolling out?<span class="faq-icon" aria-hidden="true">+</span></button>
+            <div class="faq-a" id="faq-a8" role="region" aria-labelledby="faq-q8"><p>No. Rankings move unpredictably during a rollout because different ranking systems update at different times, and week-one movement frequently reverses before completion. Google recommends waiting at least one full week after a rollout finishes before analysing your data. Changes made mid-rollout also make it impossible to tell later whether a recovery came from your fix or from the update settling.</p></div>
+          </div>
+        </div>
+
+        <div class="art-cta">
+          <h2>Want A Second Pair Of Eyes On It?</h2>
+          <p>Send us the site and roughly when the drop started. We'll check the date against the update timeline, look at which pages lost what, and tell you what we think happened — in writing, for free, with no call required.</p>
+          <p>If it turns out to be a reporting artifact and nothing is actually wrong, that's what we'll say.</p>
+          <a href="/free-seo-audit-omaha/" class="btn btn--corn">Get A Free Audit</a>
+          <a href="tel:18004818638" class="btn btn--outline">📞 1-800-481-8638</a>
+        </div>
+
+        <p class="srcnote" style="margin-top:34px;">Update dates in this article come from Google's Search Status Dashboard as reported by Search Engine Land, Search Engine Journal, Search Engine Roundtable and Ahrefs, retrieved August 2026. Google's guidance on core updates and recovery is quoted from its own core updates documentation. No client data or case study results appear in this article.</p>
+
+      </article>
+    </div>
+  </div>
+</div>
+
+<!-- Screen-reader / assistant fact block -->
+<div class="sr-only">
+  <h2>Why did my Google rankings drop — quick reference</h2>
+  <p>Published by Omaha SEO Pros. Telephone 1-800-481-8638. Published 21 August 2026.</p>
+  <p>Diagnostic order: confirm the drop is real rather than a reporting artifact; check the date against Google's confirmed update timeline; review changes made on your own site; review changes made by competitors or in the results page itself.</p>
+  <p>Three known reporting artifacts that produce apparent drops without any ranking change: Google removed the num=100 search parameter that rank-tracking tools relied on, causing tools to report keyword losses that were measurement changes; a dramatic drop dated 15 September 2025 was a confirmed Google Search Console reporting glitch; and Google confirmed an impression logging error affecting Search Console data from around May 2025 until a fix began rolling out in early April 2026, meaning impressions, click-through rate and average position before late April 2026 may be an inflated baseline while clicks were unaffected.</p>
+  <p>Confirmed Google update windows: May 2026 core update 21 May to 2 June 2026; March 2026 core update 27 March to 8 April 2026; March 2026 spam update 24 to 25 March 2026; February 2026 Discover core update 5 to 27 February 2026; December 2025 core update 11 to 29 December 2025; June 2025 core update 30 June to 17 July 2025; March 2025 core update 13 to 27 March 2025; December 2024 core update 12 to 18 December 2024; November 2024 core update 11 November to 5 December 2024; August 2024 core update 15 August to 3 September 2024; March 2024 core update lasting 45 days.</p>
+  <p>Google states that ranking drops do not necessarily mean something is wrong, that core updates do not target specific sites or pages, that recovery often comes with a later core update rather than an immediate fix, and that site owners should wait at least one full week after a rollout completes before analysing Search Console data.</p>
+  <p>Most common self-inflicted causes, in order: rewriting a page title or H1; a redesign that changed URLs without mapping redirects; a staging noindex tag or development robots.txt left live at launch; consolidating or deleting pages without redirects; and platform or host migrations.</p>
+  <p>Common external causes: a competitor improving; an AI Overview appearing above the results and absorbing clicks while position holds; business information drifting out of sync across directories; seasonality; and a decline in overall demand visible across every channel rather than search alone.</p>
+  <p>The article includes a free browser-based tool that matches a user-entered drop date against the confirmed update timeline and known reporting artifacts.</p>
+</div>
+
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="/images/omaha-seo-logo.png" alt="Omaha SEO Pros" class="logo-img" width="240" style="margin-bottom:12px;">
+        <p>Conversion-focused SEO for Nebraska businesses. Running search campaigns since 2012. Built to help Omaha businesses lead their categories in 2026 and beyond.</p>
+        <a href="tel:18004818638" class="phone-link" style="margin-top:16px; display:inline-flex;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.27 9.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.85a16 16 0 006.24 6.24l1.22-1.22a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"></path></svg>
+          1-800-481-8638
+        </a>
+      </div>
+
+      <div>
+        <p class="footer-nav-title">Services</p>
+        <ul class="footer-links">
+          <li><a href="/local-seo-omaha/">Local SEO Omaha</a></li>
+          <li><a href="/ai-search-optimization-omaha/">AI Search Optimization</a></li>
+          <li><a href="/omaha-web-designer/">Omaha Web Design</a></li>
+          <li><a href="/omaha-seo-pricing/">SEO Pricing</a></li>
+          <li><a href="/free-seo-audit-omaha/">Free SEO Audit</a></li>
+          <li><a href="/#services">PPC, Video &amp; Social</a></li>
+          <li><a href="/#services">Sales Training</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="footer-nav-title">Nebraska Markets</p>
+        <ul class="footer-links">
+          <li><a href="/#service-area">Omaha, NE</a></li>
+          <li><a href="/#service-area">Lincoln, NE</a></li>
+          <li><a href="/#service-area">Bellevue, NE</a></li>
+          <li><a href="/#service-area">Papillion, NE</a></li>
+          <li><a href="/#service-area">La Vista, NE</a></li>
+          <li><a href="/#service-area">Fremont, NE</a></li>
+          <li><a href="/#service-area">Council Bluffs, IA</a></li>
+        </ul>
+        <p class="footer-nav-title" style="margin-top:24px;">Site</p>
+        <ul class="footer-links">
+          <li><a href="/how-to-choose-an-seo-company-in-omaha/">Choosing an SEO Company</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/#scorecard">Visibility Scorecard</a></li>
+          <li><a href="/#omaha-seo-guide">Omaha SEO Guide</a></li>
+          <li><a href="/#first-steps">Do This First</a></li>
+          <li><a href="/contact/">Contact</a></li>
+          <li><a href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="footer-network">
+      Omaha SEO Pros is part of the Search Converts agency network. Our sister agency handles
+      <a href="https://eyetoad.com/" rel="noopener">Denver SEO</a> for Colorado businesses, and our
+      <a href="https://www.searchconverts.com/" rel="noopener">Denver web designer</a> team builds and maintains sites across both markets.
+      Same conversion-first playbook, different metro.
+    </p>
+
+    <div class="footer-bottom">
+      <p>© 2026 Omaha SEO Pros. All rights reserved. | <a href="/sitemap.html">Sitemap</a> | <a href="/sitemap.xml">XML Sitemap</a> | <a href="/llms.txt">llms.txt</a></p>
+      <p>Powered by <a href="https://eyetoad.com" target="_blank" rel="noopener">EyeToAd.com</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- THANK YOU MODAL -->
+<div class="thankyou-overlay" id="thankyou-overlay" role="dialog" aria-modal="true" aria-labelledby="ty-title">
+  <div class="thankyou-box">
+    <span class="thankyou-icon" aria-hidden="true">🎉</span>
+    <h2 id="ty-title">Request Received</h2>
+    <p>Your request is in. We'll reach out shortly to schedule your free strategy session.</p>
+    <p style="font-size:0.85rem; color:#666;">Need us sooner? Call <a href="tel:18004818638" style="color:var(--corn);">1-800-481-8638</a>.</p>
+    <button class="thankyou-close" type="button" onclick="closeThankYou()">Back to Site</button>
+  </div>
+</div>
+
+<!-- MOBILE STICKY CALL BAR -->
+<div class="mobile-call-bar">
+  <a href="tel:18004818638" class="mcb-call">📞 Call Now</a>
+  <a href="/#get-started" class="mcb-quote">Free Audit</a>
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  var PAGE_LOADED_AT = Date.now();
+  var MIN_FILL_MS = 3000; // time-trap: anything faster than this is a bot
+
+  // Endpoint is assembled at submit time so it never appears in the raw HTML.
+  function buildEndpoint() {
+    var f = ['aHR0cHM6Ly9mb3Jtc3VibWl0LmNvL2FqYXgv', 'aW5mbw==', 'QA==', 'ZXlldG9hZC5jb20='];
+    var out = '';
+    for (var i = 0; i < f.length; i++) { out += atob(f[i]); }
+    return out;
+  }
+
+  function setStatus(el, kind, text) {
+    el.className = 'form-status ' + kind;
+    el.textContent = text;
+  }
+
+  function clearStatus(el) {
+    el.className = 'form-status';
+    el.textContent = '';
+  }
+
+  function wireForm(formId, btnId, msgId, restLabel) {
+    var form = document.getElementById(formId);
+    if (!form) { return; }
+    var btn = document.getElementById(btnId);
+    var msg = document.getElementById(msgId);
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      clearStatus(msg);
+
+      // Honeypot + decoy field
+      var honey = form.querySelector('input[name="_honey"]');
+      if (honey && honey.value) { return; }
+      var decoy = form.querySelector('input[data-decoy]');
+      if (decoy && decoy.value) { return; }
+
+      // Submit throttle — one send per form per 30 seconds
+      var now = Date.now();
+      if (form.dataset.lastSend && now - Number(form.dataset.lastSend) < 30000) {
+        setStatus(msg, 'warn', "We already have that one. Give it a moment before sending again.");
+        return;
+      }
+
+      // Link spam signature: real people don't put URLs in a name or business field
+      var linky = /(https?:\/\/|www\.|\.ru\b|\[url|<a\s)/i;
+      var nameVal = (form.querySelector('[name="user_name"]') || {}).value || '';
+      var bizVal = (form.querySelector('[name="business_name"]') || {}).value || '';
+      if (linky.test(nameVal) || linky.test(bizVal)) { return; }
+
+      // Time trap
+      if (Date.now() - PAGE_LOADED_AT < MIN_FILL_MS) {
+        setStatus(msg, 'warn', 'Give the page a moment to finish loading, then send again.');
+        return;
+      }
+
+      // Native validation, surfaced without the browser bubble on invalid custom markup
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      form.dataset.lastSend = String(Date.now());
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+
+      var data = new FormData(form);
+      data.append('_captcha', 'false');
+      data.append('_template', 'table');
+
+      fetch(buildEndpoint(), {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      }).then(function (res) {
+        return res.json().then(function (json) {
+          return { ok: res.ok, json: json };
+        }).catch(function () {
+          return { ok: res.ok, json: null };
+        });
+      }).then(function (result) {
+        if (result.json && (result.json.success === 'true' || result.json.success === true)) {
+          form.reset();
+          openThankYou();
+        } else if (result.ok) {
+          // Request went through but the service didn't confirm delivery.
+          setStatus(msg, 'warn', "Sent, but we couldn't confirm delivery. If you don't hear from us today, call 1-800-481-8638.");
+        } else {
+          setStatus(msg, 'err', "That didn't go through. Call 1-800-481-8638 and we'll take your details directly.");
+        }
+      }).catch(function () {
+        setStatus(msg, 'err', "That didn't go through — check your connection, or call 1-800-481-8638 and we'll take your details directly.");
+      }).then(function () {
+        btn.disabled = false;
+        btn.textContent = restLabel;
+      });
+    });
+  }
+
+  wireForm('heroForm', 'heroBtn', 'heroMsg', 'Get My Free Strategy Session →');
+  wireForm('bottomForm', 'bottomBtn', 'bottomMsg', 'Send My Free Strategy Request →');
+
+  // ─── THANK YOU MODAL ───
+  var lastFocused = null;
+  window.openThankYou = function () {
+    lastFocused = document.activeElement;
+    var overlay = document.getElementById('thankyou-overlay');
+    overlay.classList.add('active');
+    var closeBtn = overlay.querySelector('.thankyou-close');
+    if (closeBtn) { closeBtn.focus(); }
+  };
+  window.closeThankYou = function () {
+    document.getElementById('thankyou-overlay').classList.remove('active');
+    if (lastFocused && lastFocused.focus) { lastFocused.focus(); }
+  };
+
+  // ─── MOBILE DRAWER ───
+  window.toggleDrawer = function () {
+    var drawer = document.getElementById('drawer');
+    var burger = document.getElementById('burger');
+    var open = drawer.classList.toggle('open');
+    burger.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    document.body.style.overflow = open ? 'hidden' : '';
+  };
+  window.closeDrawer = function () {
+    var drawer = document.getElementById('drawer');
+    if (drawer.classList.contains('open')) { window.toggleDrawer(); }
+  };
+
+  // ─── FAQ ───
+  window.toggleFaq = function (btn) {
+    var item = btn.closest('.faq-item');
+    var isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(function (el) {
+      el.classList.remove('open');
+      var b = el.querySelector('.faq-q');
+      if (b) { b.setAttribute('aria-expanded', 'false'); }
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  };
+
+  // ─── ESC CLOSES OVERLAYS ───
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape') { return; }
+    if (document.getElementById('thankyou-overlay').classList.contains('active')) {
+      window.closeThankYou();
+    }
+    window.closeDrawer();
+  });
+
+  // ─── SMOOTH SCROLL ───
+  document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      var href = this.getAttribute('href');
+      if (href === '#' || href.length < 2) { return; }
+      var target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        closeDrawer();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  // ─── SCROLL REVEAL ───
+  (function () {
+    var els = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window) ||
+        window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      els.forEach(function (el) { el.classList.add('shown'); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add('shown'); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+    els.forEach(function (el) { io.observe(el); });
+  })();
+
+  // ─── VISIBILITY SCORECARD ───
+  (function () {
+    var list = document.getElementById('scorecardList');
+    if (!list) { return; }
+    var btns = Array.prototype.slice.call(list.querySelectorAll('.tool-q'));
+    var ring = document.getElementById('ringFill');
+    var num = document.getElementById('scoreNum');
+    var verdict = document.getElementById('scoreVerdict');
+    var readout = document.getElementById('scoreReadout');
+    var CIRC = 326.7;
+
+    var BANDS = [
+      { min: 0,  color: '#E8132A', label: 'Not Findable Yet',
+        text: 'Right now a search engine has very little to go on, and an AI assistant has almost nothing it can safely repeat about your business.' },
+      { min: 30, color: '#E8132A', label: 'Serious Gaps',
+        text: 'The basics are partly there. The pieces still missing are the ones that decide whether you show up when someone is ready to buy.' },
+      { min: 55, color: '#F5C800', label: 'Halfway There',
+        text: 'You have real foundations. What is left is mostly structure and measurement, and that is usually the fastest part to fix.' },
+      { min: 75, color: '#F5C800', label: 'Competitive',
+        text: 'You are ahead of most local competitors. The remaining items are where the last stretch of ranking and AI citation lives.' },
+      { min: 92, color: '#1DB954', label: 'Well Built',
+        text: 'Very few Omaha businesses score here. At this point the work shifts from fixing to expanding — more pages, more coverage, more categories.' }
+    ];
+
+    function paint() {
+      var score = 0;
+      var missed = [];
+      btns.forEach(function (b) {
+        if (b.getAttribute('aria-pressed') === 'true') {
+          score += Number(b.dataset.weight);
+        } else {
+          missed.push(Number(b.dataset.weight));
+        }
+      });
+      if (score > 100) { score = 100; }
+
+      var band = BANDS[0];
+      for (var i = 0; i < BANDS.length; i++) { if (score >= BANDS[i].min) { band = BANDS[i]; } }
+
+      num.textContent = score;
+      ring.style.strokeDashoffset = String(CIRC - (CIRC * score / 100));
+      ring.style.stroke = band.color;
+      verdict.textContent = band.label;
+      verdict.style.color = band.color;
+      readout.textContent = missed.length
+        ? band.text + ' You left ' + missed.length + (missed.length === 1 ? ' item' : ' items') + ' unticked.'
+        : band.text;
+    }
+
+    btns.forEach(function (b) {
+      b.addEventListener('click', function () {
+        b.setAttribute('aria-pressed', b.getAttribute('aria-pressed') === 'true' ? 'false' : 'true');
+        paint();
+      });
+    });
+    paint();
+  })();
+
+  // ─── READING PROGRESS ───
+  (function () {
+    var bar = document.getElementById('progBar');
+    if (!bar) { return; }
+    var art = document.querySelector('.art-wrap');
+    function tick() {
+      if (!art) { return; }
+      var top = art.offsetTop;
+      var h = art.offsetHeight - window.innerHeight;
+      var p = h > 0 ? (window.scrollY - top) / h : 0;
+      bar.style.width = Math.max(0, Math.min(1, p)) * 100 + '%';
+    }
+    window.addEventListener('scroll', tick, { passive: true });
+    window.addEventListener('resize', tick);
+    tick();
+  })();
+
+  // ─── TABLE OF CONTENTS HIGHLIGHT ───
+  (function () {
+    var links = Array.prototype.slice.call(document.querySelectorAll('.toc a[href^="#"]'));
+    if (!links.length || !('IntersectionObserver' in window)) { return; }
+    var map = {};
+    links.forEach(function (a) {
+      var el = document.getElementById(a.getAttribute('href').slice(1));
+      if (el) { map[el.id] = a.parentElement; }
+    });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        var li = map[en.target.id];
+        if (!li) { return; }
+        if (en.isIntersecting) {
+          Object.keys(map).forEach(function (k) { map[k].classList.remove('here'); });
+          li.classList.add('here');
+        }
+      });
+    }, { rootMargin: '-160px 0px -70% 0px' });
+    Object.keys(map).forEach(function (k) {
+      var el = document.getElementById(k);
+      if (el) { io.observe(el); }
+    });
+  })();
+
+  // ─── DROP DATE CHECKER ───
+  (function () {
+    var input = document.getElementById('dropDate');
+    if (!input) { return; }
+    var out = document.getElementById('diagOut');
+
+    // Confirmed rollout windows — Google Search Status Dashboard
+    var UPDATES = [
+      ['2026-05-21', '2026-06-02', 'the May 2026 core update'],
+      ['2026-03-27', '2026-04-08', 'the March 2026 core update'],
+      ['2026-03-24', '2026-03-25', 'the March 2026 spam update'],
+      ['2026-02-05', '2026-02-27', 'the February 2026 Discover core update'],
+      ['2025-12-11', '2025-12-29', 'the December 2025 core update'],
+      ['2025-06-30', '2025-07-17', 'the June 2025 core update'],
+      ['2025-03-13', '2025-03-27', 'the March 2025 core update'],
+      ['2024-12-12', '2024-12-18', 'the December 2024 core update'],
+      ['2024-11-11', '2024-12-05', 'the November 2024 core update'],
+      ['2024-08-15', '2024-09-03', 'the August 2024 core update']
+    ];
+
+    function d(s) { return new Date(s + 'T12:00:00Z').getTime(); }
+    function pretty(s) {
+      return new Date(s + 'T12:00:00Z').toLocaleDateString('en-GB', {
+        day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC'
+      });
+    }
+
+    function render(cls, label, title, paras) {
+      out.className = 'diag-out ' + cls;
+      var html = '<span class="dv">' + label + '</span><h4>' + title + '</h4>';
+      paras.forEach(function (p) { html += '<p>' + p + '</p>'; });
+      out.innerHTML = html;
+    }
+
+    function run() {
+      var v = input.value;
+      if (!v) { return; }
+      var t = d(v);
+
+      // 1. Known Search Console reporting glitch
+      if (v === '2025-09-15') {
+        render('glitch', 'Known reporting artifact',
+          'That was a Search Console glitch',
+          ['A dramatic drop dated specifically to 15 September 2025 was a confirmed Google Search Console reporting glitch, not an algorithm event.',
+           'Your rankings were almost certainly fine. Compare a period either side of that single date and the line should be continuous.']);
+        return;
+      }
+
+      // 2. Inflated impression baseline window
+      if (t >= d('2025-05-01') && t <= d('2026-04-30')) {
+        var inWindow = null;
+        for (var i = 0; i < UPDATES.length; i++) {
+          if (t >= d(UPDATES[i][0]) && t <= d(UPDATES[i][1])) { inWindow = UPDATES[i]; break; }
+        }
+        if (inWindow) {
+          render('hit', 'Update window · check your metric',
+            'Two things overlap on that date',
+            ['Your date falls inside ' + inWindow[2] + ', which ran from ' + pretty(inWindow[0]) + ' to ' + pretty(inWindow[1]) + '.',
+             'It also falls inside the window affected by Google\u2019s confirmed Search Console impression logging error, which ran from around May 2025 until a fix began rolling out in early April 2026. Clicks were not affected by that error \u2014 so judge this drop on clicks, not on impressions or average position.',
+             'If clicks fell too, the update is the likely cause. Wait until a week after the rollout completed before acting.']);
+          return;
+        }
+        render('glitch', 'Possible reporting artifact',
+          'No confirmed update — but check your metric',
+          ['No Google update was rolling out on ' + pretty(v) + '.',
+           'That date does fall inside the window affected by Google\u2019s confirmed Search Console impression logging error, from around May 2025 until a fix began rolling out in early April 2026. If your drop is in impressions, click-through rate or average position, it may be a baseline correction rather than a real loss. Clicks were unaffected.',
+           'If clicks fell as well, look at what changed on your own site around that date.']);
+        return;
+      }
+
+      // 3. Confirmed update window
+      for (var j = 0; j < UPDATES.length; j++) {
+        if (t >= d(UPDATES[j][0]) && t <= d(UPDATES[j][1])) {
+          render('hit', 'Confirmed update window',
+            'That lines up with a Google update',
+            ['Your date falls inside ' + UPDATES[j][2] + ', which ran from ' + pretty(UPDATES[j][0]) + ' to ' + pretty(UPDATES[j][1]) + '.',
+             'If the drop hit many pages rather than a few, a core update is the most likely explanation. Google says drops do not necessarily mean something is wrong, and that recovery usually arrives with a later update rather than an immediate fix.',
+             'Wait until at least a week after the rollout finished before analysing the data, then look at which pages lost the most.']);
+          return;
+        }
+      }
+
+      // 4. Near-miss — within 10 days of a rollout
+      for (var k = 0; k < UPDATES.length; k++) {
+        var gapStart = (d(UPDATES[k][0]) - t) / 86400000;
+        var gapEnd = (t - d(UPDATES[k][1])) / 86400000;
+        if ((gapStart > 0 && gapStart <= 10) || (gapEnd > 0 && gapEnd <= 10)) {
+          render('glitch', 'Close to an update',
+            'Near a rollout, but not inside one',
+            ['No confirmed update was running on ' + pretty(v) + ', but ' + UPDATES[k][2] + ' ran ' + pretty(UPDATES[k][0]) + ' to ' + pretty(UPDATES[k][1]) + ' \u2014 within about ten days.',
+             'Volatility often builds before a rollout and keeps moving after it completes. Treat this as possible but unconfirmed, and check what changed on your own site in the same window before assuming the update.']);
+          return;
+        }
+      }
+
+      // 5. Nothing matches
+      render('clear', 'No update on that date',
+        'This one is probably yours',
+        ['No confirmed Google update was rolling out on ' + pretty(v) + ', and it falls outside the known reporting-error windows.',
+         'That points at your own site or your competitors. Work through the list below: content edits, redesigns and redirects, a stray noindex tag, deleted pages, or a competitor who simply got better.',
+         'Start with anything you changed within three weeks either side of that date.']);
+    }
+
+    input.addEventListener('change', run);
+    input.addEventListener('input', run);
+    run();
+  })();
+})();
+</script>
+
+</body>
+</html>
