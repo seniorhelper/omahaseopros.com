@@ -621,6 +621,98 @@ footer.site a:hover{color:var(--amber)}
   #krn-tab{padding:12px 7px 14px}
 }
 @media(prefers-reduced-motion:reduce){#krn-tab svg{animation:none}}
+
+/* ==== v2 chrome: big logo, big white phone, white footer ==== */
+.brand-logo{height:138px!important;width:auto;display:block;max-width:100%}
+@media(max-width:1100px){.brand-logo{height:104px!important}}
+@media(max-width:640px){.brand-logo{height:78px!important}}
+.navrow{padding:14px 0;gap:14px}
+.topbar{padding:14px 0;font-size:1rem}
+.topbar .wrap{gap:14px}
+.topbar .area{font-size:.9rem;color:rgba(255,255,255,.85)}
+.topbar a.tel{
+  color:#fff!important;font-family:var(--serif);font-weight:900;
+  font-size:clamp(1.5rem,4.2vw,2.15rem);letter-spacing:-.02em;text-decoration:none;
+  display:inline-flex;align-items:center;gap:10px;line-height:1.05;
+  text-shadow:0 2px 14px rgba(0,0,0,.35);transition:transform .2s ease,color .2s ease;
+}
+.topbar a.tel:hover{color:#FFE071!important;transform:translateY(-1px)}
+.topbar a.tel svg{width:.78em;height:.78em;flex-shrink:0}
+@media(max-width:560px){.topbar .wrap{flex-direction:column;gap:8px}}
+
+footer.site{background:#FFFFFF!important;color:var(--tx-mid)!important;border-top:5px solid transparent;
+  border-image:linear-gradient(90deg,var(--coral),var(--amber),var(--lime),var(--teal),var(--blue),var(--violet)) 1}
+footer.site h4{color:var(--ink)!important}
+footer.site a{color:var(--tx-mid)!important}
+footer.site a:hover{color:var(--amber-hot)!important}
+footer.site .foot-grid{border-bottom:1px solid var(--line)!important}
+footer.site .foot-bot{color:var(--tx-soft)!important}
+.foot-logo{height:132px!important;width:auto;display:block;filter:none!important;opacity:1!important;margin-bottom:6px}
+@media(max-width:640px){.foot-logo{height:92px!important}}
+.foot-brand{display:block!important}
+.foot-brand span{display:none}
+.powered{background:var(--cream2)!important;border:1px solid var(--line)!important;color:var(--tx-mid)!important}
+.powered a{color:var(--blue-dk)!important}
+.powered a:hover{color:var(--amber-hot)!important}
+
+/* ==== 3. more color + fun ==== */
+.sec-head h2 .pop{background:linear-gradient(95deg,var(--coral),var(--amber-hot) 40%,var(--violet));
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.confetti{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.confetti i{position:absolute;display:block;border-radius:2px;opacity:.5;
+  animation:cfloat 14s ease-in-out infinite}
+@keyframes cfloat{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-26px) rotate(22deg)}}
+.svc:nth-child(6n+1){--acc:var(--coral)}.svc:nth-child(6n+2){--acc:var(--amber-hot)}
+.svc:nth-child(6n+3){--acc:var(--lime)}.svc:nth-child(6n+4){--acc:var(--teal)}
+.svc:nth-child(6n+5){--acc:var(--blue-dk)}.svc:nth-child(6n+6){--acc:var(--violet)}
+.svc::after{background:linear-gradient(90deg,var(--acc),var(--amber))!important;transform:scaleX(1)!important;height:5px!important}
+.svc-ico{background:linear-gradient(140deg,color-mix(in srgb,var(--acc) 24%,#fff),color-mix(in srgb,var(--acc) 8%,#fff))!important}
+.svc-ico svg{stroke:var(--acc)!important}
+.svc ul li::before{background:var(--acc)!important}
+.svc-link{color:var(--acc)!important}
+.step:nth-child(4n+1){--acc:var(--coral)}.step:nth-child(4n+2){--acc:var(--amber-hot)}
+.step:nth-child(4n+3){--acc:var(--teal)}.step:nth-child(4n+4){--acc:var(--violet)}
+.step-n{-webkit-text-stroke-color:var(--acc)!important}
+.step{border-top:4px solid var(--acc)}
+.chip{background:rgba(255,255,255,.14)!important;border-color:rgba(255,255,255,.3)!important}
+.trust-cell:nth-child(1) .trust-num{color:var(--coral)}
+.trust-cell:nth-child(2) .trust-num{color:var(--teal)}
+.trust-cell:nth-child(3) .trust-num{color:var(--violet)}
+.trust-cell:nth-child(4) .trust-num{color:var(--amber-hot)}
+.area-cloud span:nth-child(3n+1):hover{border-color:var(--coral);color:var(--coral)}
+.area-cloud span:nth-child(3n+2):hover{border-color:var(--teal);color:var(--teal)}
+.area-cloud span:nth-child(3n+3):hover{border-color:var(--violet);color:var(--violet)}
+.faq details:nth-child(4n+1){border-left:4px solid var(--coral)}
+.faq details:nth-child(4n+2){border-left:4px solid var(--amber-hot)}
+.faq details:nth-child(4n+3){border-left:4px solid var(--teal)}
+.faq details:nth-child(4n+4){border-left:4px solid var(--violet)}
+
+/* ==== Kernel v2: full standing cornstalk ==== */
+#krn-stage{position:fixed;right:10px;bottom:0;z-index:80;display:flex;flex-direction:column;align-items:center;
+  pointer-events:none}
+#krn-stage[hidden]{display:none}
+#krn-bubble{pointer-events:auto;background:#fff;border:2px solid var(--amber);border-radius:16px;
+  padding:10px 15px;font-size:.84rem;font-weight:700;color:var(--ink);box-shadow:0 10px 28px rgba(18,53,91,.2);
+  margin-bottom:6px;max-width:190px;text-align:center;position:relative;cursor:pointer;line-height:1.35}
+#krn-bubble::after{content:"";position:absolute;bottom:-9px;left:50%;margin-left:-8px;
+  border:8px solid transparent;border-top-color:var(--amber);border-bottom:0}
+#krn-open{pointer-events:auto;background:none;border:none;cursor:pointer;padding:0;display:block}
+.krn-stalk{width:clamp(100px,13vw,152px);height:auto;display:block;filter:drop-shadow(0 12px 22px rgba(18,53,91,.28))}
+#krn-dismiss{pointer-events:auto;position:absolute;top:-6px;right:-4px;width:28px;height:28px;border-radius:50%;
+  background:var(--ink);color:#fff;border:2px solid #fff;cursor:pointer;font-size:1rem;line-height:1;
+  display:grid;place-items:center;box-shadow:0 4px 12px rgba(18,53,91,.3)}
+#krn-dismiss:hover{background:var(--coral)}
+@keyframes krnsway{0%,100%{transform:rotate(-1.6deg)}50%{transform:rotate(1.6deg)}}
+@keyframes krnblink{0%,92%,100%{transform:scaleY(1)}96%{transform:scaleY(.12)}}
+@keyframes krnwave{0%,100%{transform:rotate(0)}50%{transform:rotate(-24deg)}}
+.krn-sway{transform-origin:70px 400px;animation:krnsway 5.5s ease-in-out infinite}
+.krn-eye{fill:#1B3350;transform-origin:center;animation:krnblink 6s ease-in-out infinite}
+.krn-wave{transform-origin:112px 232px;animation:krnwave 3.4s ease-in-out infinite}
+#krn-tab{display:none!important}
+@media(max-width:620px){#krn-bubble{display:none}.krn-stalk{width:86px}}
+@media(prefers-reduced-motion:reduce){.krn-sway,.krn-eye,.krn-wave{animation:none}}
+#krn-panel{bottom:16px;right:16px}
+@media(min-width:900px){#krn-panel{right:180px}}
 </style>
 </head>
 <body>
@@ -628,9 +720,11 @@ footer.site a:hover{color:var(--amber)}
 
 <div class="topbar">
   <div class="wrap">
-    <span>Serving Omaha, Bellevue, Papillion, La Vista, Elkhorn &amp; Council Bluffs</span>
-    <span class="dot" aria-hidden="true"></span>
-    <span>Call <a href="tel:18004818638">1-800-481-8638</a></span>
+    <span class="area">Serving Omaha, Bellevue, Papillion, La Vista, Elkhorn &amp; Council Bluffs</span>
+    <a class="tel" href="tel:18004818638">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.3-1.2a2 2 0 012.1-.5c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z" stroke-linejoin="round"/></svg>
+      1-800-481-8638
+    </a>
   </div>
 </div>
 
@@ -645,8 +739,10 @@ footer.site a:hover{color:var(--amber)}
     <nav class="nav" id="nav" aria-label="Main">
       <a href="/local-seo-omaha/">Local SEO</a>
       <a href="/ai-search-optimization-omaha/">AI Search</a>
-      <a href="/omaha-web-designer/">Web Design</a>
-      <a href="/omaha-seo-pricing/">Pricing</a>
+      <a href="/technical-seo-omaha/">Technical</a>
+      <a href="/omaha-web-development/">Web Dev</a>
+      <a href="/omaha-ppc-management/">PPC</a>
+      <a href="/social-media-marketing-omaha/">Social</a>
       <a href="/projects/">Our Work</a>
       <a href="/blog/">Blog</a>
       <a href="/contact/" class="cta">Talk To Us</a>
@@ -1029,7 +1125,14 @@ footer.site a:hover{color:var(--amber)}
         <ul>
           <li><a href="/local-seo-omaha/">Local SEO Omaha</a></li>
           <li><a href="/ai-search-optimization-omaha/">AI Search Optimization</a></li>
+          <li><a href="/technical-seo-omaha/">Technical SEO Omaha</a></li>
+          <li><a href="/ecommerce-seo-omaha/">Ecommerce SEO Omaha</a></li>
           <li><a href="/omaha-web-designer/">Omaha Web Design</a></li>
+          <li><a href="/omaha-web-development/">Omaha Web Development</a></li>
+          <li><a href="/omaha-ppc-management/">PPC Management</a></li>
+          <li><a href="/social-media-marketing-omaha/">Social Media Marketing</a></li>
+          <li><a href="/omaha-facebook-group-advertising/">Omaha Group Advertising</a></li>
+          <li><a href="/omaha-seo-consultant/">Omaha SEO Consultant</a></li>
           <li><a href="/free-seo-audit-omaha/">Free SEO Audit</a></li>
           <li><a href="/omaha-seo-pricing/">Pricing</a></li>
         </ul>
@@ -1332,6 +1435,50 @@ if(form){
 }
 </script>
 
+
+<div id="krn-stage">
+  <div id="krn-bubble">Hey! I'm Kernel &mdash; need a hand?</div>
+  <div style="position:relative;pointer-events:auto">
+    <button id="krn-dismiss" aria-label="Dismiss Kernel" title="Dismiss">&times;</button>
+    <button id="krn-open" aria-label="Chat with Kernel" aria-expanded="false" aria-controls="krn-panel"><svg viewBox="0 0 140 420" role="img" aria-label="Kernel, a tall cartoon cornstalk character wearing large round glasses." class="krn-stalk">
+<defs>
+ <linearGradient id="ksB" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7BD34F"/><stop offset=".5" stop-color="#57B534"/><stop offset="1" stop-color="#3B8A22"/></linearGradient>
+ <linearGradient id="ksL" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#86DB5A"/><stop offset="1" stop-color="#3E9226"/></linearGradient>
+ <linearGradient id="ksC" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFE071"/><stop offset=".55" stop-color="#FFC533"/><stop offset="1" stop-color="#EFA01E"/></linearGradient>
+ <linearGradient id="ksH" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8FE06A"/><stop offset="1" stop-color="#4CA82D"/></linearGradient>
+</defs>
+<g class="krn-sway">
+  <path d="M64 400V150h12v250z" fill="url(#ksB)"/>
+  <path d="M64 330q-40 8-52-30 34-14 52 6z" fill="url(#ksL)"/>
+  <path d="M76 300q40 10 52-28-34-14-52 6z" fill="url(#ksL)"/>
+  <path d="M64 246q-36 6-46-26 30-13 46 6z" fill="url(#ksL)" opacity=".92"/>
+  <path d="M76 214q36 8 46-24-30-13-46 6z" fill="url(#ksL)" opacity=".92"/>
+  <path d="M70 118c-7 5-11 13-11 22h8c0-8 1-15 3-22z" fill="url(#ksH)"/>
+  <path d="M70 118c7 5 11 13 11 22h-8c0-8-1-15-3-22z" fill="url(#ksH)"/>
+  <g class="krn-body">
+    <ellipse cx="70" cy="196" rx="44" ry="58" fill="url(#ksC)"/>
+    <g stroke="#E8A81C" stroke-width="1.7" opacity=".4" fill="none">
+      <path d="M70 142v108M50 147v98M90 147v98M34 160v72M106 160v72"/>
+      <path d="M28 166h84M28 186h84M28 206h84M32 226h76M40 242h60"/>
+    </g>
+    <g>
+      <ellipse cx="53" cy="186" rx="18" ry="18" fill="#fff" stroke="#1B3350" stroke-width="4.5"/>
+      <ellipse cx="89" cy="186" rx="18" ry="18" fill="#fff" stroke="#1B3350" stroke-width="4.5"/>
+      <path d="M70 185h2" stroke="#1B3350" stroke-width="5" stroke-linecap="round"/>
+      <path d="M34 183l-10-5M108 183l10-5" stroke="#1B3350" stroke-width="4.5" stroke-linecap="round"/>
+      <circle class="krn-eye" cx="56" cy="188" r="7"/><circle class="krn-eye" cx="92" cy="188" r="7"/>
+      <circle cx="58.6" cy="185.4" r="2.6" fill="#fff"/><circle cx="94.6" cy="185.4" r="2.6" fill="#fff"/>
+    </g>
+    <path d="M56 218q14 13 28 0" stroke="#8A5A0E" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <ellipse cx="36" cy="212" rx="7.5" ry="5" fill="#FF9A8A" opacity=".5"/>
+    <ellipse cx="106" cy="212" rx="7.5" ry="5" fill="#FF9A8A" opacity=".5"/>
+    <g class="krn-wave"><path d="M112 232q22 6 26 26" stroke="url(#ksL)" stroke-width="11" fill="none" stroke-linecap="round"/></g>
+  </g>
+</g>
+</svg></button>
+  </div>
+</div>
+
 <button id="krn-tab" aria-expanded="false" aria-controls="krn-panel" title="Chat with Kernel">
   <svg viewBox="0 0 80 100" width="30" height="30" role="img" aria-label="Kernel, a cartoon corn cob wearing large round glasses.">
 <defs>
@@ -1583,6 +1730,23 @@ tab.addEventListener('click',open);
 close.addEventListener('click',shut);
 document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&panel.classList.contains('open')) shut(); });
 form.addEventListener('submit',function(e){ e.preventDefault(); handle(inp.value); });
+})();
+</script>
+<script>
+/* ---- Kernel v2 stage wiring ---- */
+(function(){
+var stage=document.getElementById('krn-stage'), openBtn=document.getElementById('krn-open'),
+    bubble=document.getElementById('krn-bubble'), dis=document.getElementById('krn-dismiss'),
+    tab=document.getElementById('krn-tab');
+if(!stage||!tab) return;
+function fire(){ tab.click(); }
+openBtn.addEventListener('click',fire);
+bubble.addEventListener('click',fire);
+dis.addEventListener('click',function(e){ e.stopPropagation(); stage.hidden=true; });
+var p=document.getElementById('krn-panel'), c=document.getElementById('krn-close');
+if(c) c.addEventListener('click',function(){ stage.hidden=false; });
+var mo=new MutationObserver(function(){ if(p.classList.contains('open')) stage.hidden=true; });
+mo.observe(p,{attributes:true,attributeFilter:['class']});
 })();
 </script>
 </body>
