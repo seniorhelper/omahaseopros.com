@@ -2738,7 +2738,7 @@ if(form){
     var hp=document.getElementById('_honey');
     if(hp && hp.value){ return; }
     if(!interacted){ return; }
-    if(Date.now()-loaded < 4000){ say('warn','Give it just a moment and press send again.'); return; }
+    if(Date.now()-loaded < 3500){ say('warn','Give the form a moment, then send again.'); return; }
 
     var math=document.getElementById('f-math');
     if(parseInt((math.value||'').trim(),10)!==a+b){ say('err','That arithmetic answer isn\u2019t right. Try once more.'); math.focus(); return; }
@@ -2759,15 +2759,16 @@ if(form){
     fd.append('website',document.getElementById('f-site').value.trim());
     fd.append('need',document.getElementById('f-help').value);
     fd.append('message',document.getElementById('f-msg').value.trim());
-    fd.append('_subject','Omaha SEO Pros — new lead from '+biz);
+    fd.append('_subject','New lead — omahaseopros.com — '+biz);
     fd.append('_template','table');
     fd.append('_captcha','false');
 
-    var ep = atob('aHR0cHM6Ly9mb3Jtc3VibWl0LmNvLw==') + addr('aW5mbw==','ZXlldG9hZC5jb20=');
+    var ep = atob('aHR0cHM6Ly9mb3Jtc3VibWl0LmNvL2FqYXgv') + addr('aW5mbw==','ZXlldG9hZC5jb20=');
 
-    fetch(ep,{method:'POST',body:fd})
-      .then(function(r){
-        if(r.ok){
+    fetch(ep,{method:'POST',headers:{'Accept':'application/json'},body:fd})
+      .then(function(r){ return r.json().catch(function(){ return {}; }); })
+      .then(function(j){
+        if(j && String(j.success)==='true'){
           form.style.display='none';
           say('ok','Got it, '+name.split(' ')[0]+'. We\u2019ll look at your site before we reply, so the first answer is a useful one. Expect to hear from us within one business day. If it\u2019s urgent, call 1-800-481-8638.');
         } else {
@@ -2955,7 +2956,7 @@ form.addEventListener('submit',function(e){ e.preventDefault(); handle(inp.value
   'use strict';
 
   var PAGE_LOADED_AT = Date.now();
-  var MIN_FILL_MS = 3000; // time-trap: anything faster than this is a bot
+  var MIN_FILL_MS = 3500; // time-trap: anything faster than this is a bot
 
   // Endpoint is assembled at submit time so it never appears in the raw HTML.
   function buildEndpoint() {
@@ -3006,7 +3007,7 @@ form.addEventListener('submit',function(e){ e.preventDefault(); handle(inp.value
 
       // Time trap
       if (Date.now() - PAGE_LOADED_AT < MIN_FILL_MS) {
-        setStatus(msg, 'warn', 'Give the page a moment to finish loading, then send again.');
+        setStatus(msg, 'warn', 'Give the form a moment, then send again.');
         return;
       }
 

@@ -114,6 +114,9 @@ study with its sample size. No client results or case study figures appear.
   (Strategy): Google Ads averaged $66.69 per lead across 13,474 campaigns.
   Organic has no fixed cost per lead because it is a fee divided by monthly lead
   volume. Free crossover calculator.
+- [Google Search Console For Business Owners](https://omahaseopros.com/blog/google-search-console-for-business-owners/)
+  (Strategy): The five Search Console reports worth checking monthly (Performance,
+  Page indexing, URL Inspection, Sitemaps, Core Web Vitals) and what they mean.
 - [The Google Business Profile Checklist](https://omahaseopros.com/blog/google-business-profile-checklist/)
   (Local SEO): 22 points ordered by evidence, including a controlled study
   finding Google Business Profile Posts produce no ranking movement. Free

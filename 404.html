@@ -2172,7 +2172,7 @@ footer .phone-link:hover { color: var(--red) !important; }
   'use strict';
 
   var PAGE_LOADED_AT = Date.now();
-  var MIN_FILL_MS = 3000; // time-trap: anything faster than this is a bot
+  var MIN_FILL_MS = 3500; // time-trap: anything faster than this is a bot
 
   // Endpoint is assembled at submit time so it never appears in the raw HTML.
   function buildEndpoint() {
@@ -2223,7 +2223,7 @@ footer .phone-link:hover { color: var(--red) !important; }
 
       // Time trap
       if (Date.now() - PAGE_LOADED_AT < MIN_FILL_MS) {
-        setStatus(msg, 'warn', 'Give the page a moment to finish loading, then send again.');
+        setStatus(msg, 'warn', 'Give the form a moment, then send again.');
         return;
       }
 

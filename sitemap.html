@@ -2247,6 +2247,13 @@ footer .phone-link:hover { color: var(--red) !important; }
       </div>
       <div class="map-row">
         <div>
+          <h3><a href="/blog/google-search-console-for-business-owners/">Google Search Console For Business Owners</a></h3>
+          <p>The five Search Console reports worth ten minutes a month, and what clicks, impressions, CTR and position actually tell you.</p>
+        </div>
+        <div class="map-url">omahaseopros.com/blog/google-search-console-for-business-owners/</div>
+      </div>
+      <div class="map-row">
+        <div>
           <h3><a href="/blog/google-business-profile-checklist/">Google Business Profile Checklist</a></h3>
           <p>22 points sorted by evidence, including the popular tips that controlled studies have debunked.</p>
           <div class="map-tools"><span class="map-tool">Profile Scorecard</span></div>
@@ -2363,7 +2370,7 @@ footer .phone-link:hover { color: var(--red) !important; }
   'use strict';
 
   var PAGE_LOADED_AT = Date.now();
-  var MIN_FILL_MS = 3000; // time-trap: anything faster than this is a bot
+  var MIN_FILL_MS = 3500; // time-trap: anything faster than this is a bot
 
   // Endpoint is assembled at submit time so it never appears in the raw HTML.
   function buildEndpoint() {
@@ -2414,7 +2421,7 @@ footer .phone-link:hover { color: var(--red) !important; }
 
       // Time trap
       if (Date.now() - PAGE_LOADED_AT < MIN_FILL_MS) {
-        setStatus(msg, 'warn', 'Give the page a moment to finish loading, then send again.');
+        setStatus(msg, 'warn', 'Give the form a moment, then send again.');
         return;
       }
 
