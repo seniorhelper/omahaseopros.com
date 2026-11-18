@@ -40,7 +40,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
 
 <style>
 /* ============ TOKENS ============ */
@@ -58,7 +58,7 @@
   --sh-lg:0 28px 66px rgba(8,21,36,.20);
   --r:14px; --r-lg:22px;
   --wrap:1180px;
-  --serif:'Fraunces',Georgia,'Times New Roman',serif;
+  --serif:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
   --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
 }
 *,*::before,*::after{box-sizing:border-box}
@@ -140,7 +140,7 @@ header.site.stuck{box-shadow:0 6px 24px rgba(8,21,36,.09)}
 .burger[aria-expanded="true"] span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
 .burger[aria-expanded="true"] span:nth-child(2){opacity:0}
 .burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
-@media(max-width:980px){
+@media(max-width:1180px){
   .nav{
     position:absolute;top:100%;left:0;right:0;background:var(--cream);
     flex-direction:column;align-items:stretch;gap:0;padding:10px 22px 22px;
@@ -710,7 +710,7 @@ header.site.stuck{box-shadow:0 6px 24px rgba(8,21,36,.09)}
         <span class="eyebrow">Who You'd Actually Be Hiring</span>
         <h2>Omaha isn't a market to us. It's home.</h2>
         <p class="lede">Plenty of agencies bid on "Omaha SEO." Read their Omaha pages closely and you'll find paragraphs about the Henry Doorly Zoo and the Old Market. That's a template with the city name swapped in by someone who has never been here.</p>
-        <p>Our founder was born in Fremont, with family in Omaha, Lincoln and Schuyler. We're a national agency &mdash; we run campaigns and build sites for clients in a lot of markets &mdash; and Omaha is one of our core hubs, because it's the one we actually come from. We want Nebraska businesses to win here, and that's not a marketing line.</p>
+        <p>Our founder was born in Fremont, with family in Omaha, Lincoln and Schuyler. We're a national agency &mdash; we run campaigns and build sites for clients in a lot of markets &mdash; and Omaha is one of our core hubs, because it's the one we actually come from. We want Nebraska businesses to win here, and that's not a marketing line. Lincoln gets its own plan too &mdash; see <a href="/lincoln-ne-seo/">Lincoln NE SEO</a> &mdash; and our <a href="/omaha-small-business-marketing/">Omaha small business marketing guide</a> maps how the metro searches, from the Old Market to Council Bluffs.</p>
         <p>We've been building websites and search campaigns since 2012. Before that, our founder ran sales floors for multi-million-dollar plumbing and remodeling companies. We know what a real lead sounds like on the phone, because we used to close them.</p>
         <ul class="cred-list">
           <li>
@@ -750,7 +750,7 @@ header.site.stuck{box-shadow:0 6px 24px rgba(8,21,36,.09)}
           <circle cx="94" cy="94" r="76" fill="none" stroke="rgba(255,255,255,.1)" stroke-width="20"/>
           <circle class="donut-ring" id="aiRing" cx="94" cy="94" r="76" fill="none" stroke="#F5A623" stroke-width="20"
                   stroke-linecap="round" stroke-dasharray="477.5" stroke-dashoffset="477.5" transform="rotate(-90 94 94)"/>
-          <text x="94" y="90" text-anchor="middle" fill="#fff" font-family="Fraunces,Georgia,serif" font-size="38" font-weight="900">31%</text>
+          <text x="94" y="90" text-anchor="middle" fill="#fff" font-family="Inter,system-ui,Arial,sans-serif" font-size="38" font-weight="900">31%</text>
           <text x="94" y="112" text-anchor="middle" fill="rgba(255,255,255,.62)" font-family="Inter,sans-serif" font-size="11" font-weight="600">of all SERPs</text>
         </svg>
       </div>
@@ -822,7 +822,7 @@ header.site.stuck{box-shadow:0 6px 24px rgba(8,21,36,.09)}
               <circle cx="65" cy="65" r="54" fill="none" stroke="#EFE7D8" stroke-width="15"/>
               <circle class="score-ring" id="scoreRing" cx="65" cy="65" r="54" fill="none" stroke="#2FB98A" stroke-width="15"
                       stroke-linecap="round" stroke-dasharray="339.3" stroke-dashoffset="339.3" transform="rotate(-90 65 65)"/>
-              <text x="65" y="62" text-anchor="middle" font-family="Fraunces,Georgia,serif" font-size="30" font-weight="900" fill="#081524" id="scoreNum">0</text>
+              <text x="65" y="62" text-anchor="middle" font-family="Inter,system-ui,Arial,sans-serif" font-size="30" font-weight="900" fill="#081524" id="scoreNum">0</text>
               <text x="65" y="81" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" font-weight="600" fill="#6E7F90">out of 100</text>
             </svg>
           </div>
@@ -1002,6 +1002,7 @@ footer.site a:hover{color:var(--amber)}
 
 /* ==== v2 chrome: big logo, big white phone, white footer ==== */
 .brand-logo{height:138px!important;width:auto;display:block;max-width:100%}
+@media(max-width:1340px){.brand-logo{height:112px!important}}
 @media(max-width:1100px){.brand-logo{height:104px!important}}
 @media(max-width:640px){.brand-logo{height:78px!important}}
 .navrow{padding:14px 0;gap:14px}
@@ -1097,6 +1098,12 @@ footer.site .foot-bot{color:var(--tx-soft)!important}
   border-radius:9px;background:rgba(255,180,61,.16);border:1.5px solid rgba(255,122,61,.5);z-index:-1}
 .serp-cap{background:#17457A;color:#fff!important;margin:0!important;padding:11px 16px!important;
   font-weight:700!important;font-size:.82rem!important;letter-spacing:.01em}
+/* compact SERP rows: nine results share the list height, so show one line each */
+.serp-item{height:29px;display:flex;align-items:center;gap:8px}
+.serp-item .crumb{margin:0;flex-shrink:0}
+.serp-item .url,.serp-item .snip{display:none}
+.serp-item .ttl{margin:0;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.serp-item.you::before{top:-2px;bottom:-2px}
 
 /* ==== Kernel v2: full standing cornstalk ==== */
 #krn-stage{position:fixed;right:10px;bottom:0;z-index:80;display:flex;flex-direction:column;align-items:center;
@@ -2155,10 +2162,9 @@ var KB=[
 
 /* --- Nebraska / Huskers --- */
 {k:['husker','huskers','nebraska football','big red','memorial stadium','cornhusker','go big red','football','lincoln football','tunnel walk'],
- a:["Go Big Red. Memorial Stadium on a game day is still one of the great sights in college football &mdash; on Saturdays it's effectively one of the most populated places in the state. The sellout streak is the longest in the sport by a wide margin, and the Sea of Red genuinely does turn the whole bowl one color.<br><br>Fair warning: I'm a scripted corn cob, so I don't have live scores or standings. For that you want an actual sports app. But I'll talk tradition all day.",
-    "Huskers talk, my favorite. The Tunnel Walk, the balloon tradition, the fact that Nebraska fans have a national reputation for applauding the <em>other</em> team when they play well. That last one is a real thing and it's a pretty good look for the state.<br><br>Can't give you live scores though &mdash; I'm scripted, not connected. Ask me about traditions instead."]},
+ a:["I'm a scripted corn stalk, so I stay out of sports talk &mdash; no live scores, no team picks, no game-day takes. For that you want an actual sports app.<br><br>What I <em>can</em> do is help you figure out why a competitor shows up on Google ahead of you. Want to start there?"]},
 {k:['score','who won','game last night','standings','record this season','playing today'],
- a:["I don't have live scores &mdash; I'm a scripted bot, so I'd just be making it up, and I won't do that. Check an actual sports app.<br><br>I can talk Husker history and traditions though, if you want."]},
+ a:["I don't have live scores &mdash; I'm a scripted bot, so I'd just be making it up, and I won't do that. Check an actual sports app.<br><br>I can help with getting your business found on Google, though, if you want."]},
 {k:['omaha','nebraska','local area','the metro','this city','bellevue','papillion','council bluffs','la vista','elkhorn','lincoln','fremont'],
  a:["Omaha's a genuinely underrated business town &mdash; one of the most Fortune-dense metros per capita in the country, and an insurance and finance center on top of that.<br><br>We serve the whole metro: Omaha, Bellevue, Papillion, La Vista, Gretna, Elkhorn, Ralston, Bennington, Blair, Plattsmouth, plus Council Bluffs across the river, and Lincoln and Fremont.<br><br>Which one are you in?"]},
 {k:['zoo','old market','henry doorly','things to do','runza','college world series','cws'],

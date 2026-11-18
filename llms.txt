@@ -81,7 +81,7 @@
   calculator showing what one percentage point of conversion is worth.
 - [Free SEO Audit Omaha](https://omahaseopros.com/free-seo-audit-omaha/): a free
   written audit covering findability, site health, conversion and AI readiness,
-  plus a 20-point self-audit that runs in the browser and produces a prioritised
+  plus a 20-point self-audit that runs in the browser and produces a prioritized
   fix list.
 - [Omaha SEO Pricing](https://omahaseopros.com/omaha-seo-pricing/): six named
   industry surveys side by side, an explanation of why they disagree, the four
@@ -89,6 +89,17 @@
 - [How to Choose an SEO Company in Omaha](https://omahaseopros.com/how-to-choose-an-seo-company-in-omaha/):
   a buyer's guide with ten questions to ask, what good and bad answers sound
   like, how to verify claims with free tools, and a three-way agency scorecard.
+- [Omaha SEO for Contractors](https://omahaseopros.com/omaha-seo-for-contractors/):
+  SEO for roofing, HVAC, plumbing, remodeling and other trades in the Omaha
+  metro: seasonal demand, Nebraska and Iowa contractor registration as trust
+  signals, service and service-area pages, AI assistants, and lead handling.
+- [Lincoln NE SEO](https://omahaseopros.com/lincoln-ne-seo/): local SEO for
+  Lincoln and Lancaster County businesses, how Lincoln searches, the Haymarket
+  and downtown, and one website versus two for Omaha-and-Lincoln businesses.
+- [Omaha Small Business Marketing](https://omahaseopros.com/omaha-small-business-marketing/):
+  a field guide to the eight-county Omaha-Council Bluffs metro: how each area
+  searches, a seasonal marketing calendar, channel priorities and free local
+  resources.
 - [Contact](https://omahaseopros.com/contact/): phone, hours, response times and
   a routed contact form.
 - [Blog](https://omahaseopros.com/blog/): six practical guides, filterable by
